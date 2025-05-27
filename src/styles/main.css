@@ -1,3 +1,5 @@
+/* --- src/styles/main.css --- */
+
 /* Styles for individual parallax sections */
 .parallax-section {
     min-height: 100vh; /* Each section takes full viewport height */
@@ -6,12 +8,12 @@
     justify-content: center;
     text-align: center;
     position: relative; /* Crucial for absolute positioning of layers */
-    overflow: hidden; /* Ensure content stays within bounds */
+    /* REMOVED: overflow: hidden; from here to allow elements to bleed */
     scroll-snap-align: start; /* For smooth snapping behavior */
     scroll-snap-stop: always;
 }
 
-/* Styles for individual parallax background layers */
+/* Styles for individual parallax background layers (within sections) */
 .parallax-layer {
     position: absolute;
     top: 0;
@@ -19,19 +21,40 @@
     width: 100%;
     height: 100%;
     will-change: transform; /* Optimize for smooth transformations */
-    /* z-index is now set inline based on layer order */
+    pointer-events: none; /* Allows mouse events to pass through to elements behind it */
+    /* z-index is now set inline based on layer data */
 }
 
 /* Specific styles for layers that should 'contain' their image */
-.parallax-layer[data-display-mode="contain"] {
-    background-size: contain;
+.parallax-layer[data-object-fit="contain"] {
+    background-size: 30% auto; /* Default size for contained images */
     background-repeat: no-repeat;
 }
 
-/* Default for 'cover' mode (or if no data-display-mode is set) */
-.parallax-layer[data-display-mode="cover"] {
+/* Default for 'cover' mode (or if no data-object-fit is set) */
+.parallax-layer[data-object-fit="cover"] {
     background-size: cover;
-    background-repeat: no-repeat; /* Ensure no repeat for cover */
+    background-repeat: no-repeat;
+}
+
+/* NEW: Styles for foreground "bleeding" layers (now applied to parallax-layer) */
+.parallax-layer[data-is-bleeding="true"] {
+    /* These layers will be taller and positioned to visually connect sections */
+    height: 150vh; /* Make it taller than the section to bleed significantly */
+    top: -25vh; /* Adjust top to make it start higher and bleed from previous section */
+    /* You will need to fine-tune `height` and `top` based on your specific image and desired effect */
+}
+
+/* NEW: Wrapper for non-bleeding content and layers */
+.section-inner-content-wrapper {
+    position: absolute; /* Position it relative to .parallax-section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* THIS IS THE KEY! It clips non-bleeding content within the section */
+    pointer-events: none; 
+    z-index: 80;/* Allow events to pass through, though content is within overlay */
 }
 
 /* Styles for the overlay and content */
@@ -48,11 +71,12 @@
     justify-content: center;
     padding: 2rem;
     box-sizing: border-box;
-    z-index: 0; /* Place overlay between layers and content */
+    z-index: 10; /* Changed from 0 to 10: Place overlay above all parallax layers */
+    pointer-events: auto; /* Allow interaction with content */
 }
 
 .section-content {
-    z-index: 10; /* Ensure content is above overlay and layers */
+    z-index: 100; /* Changed from 10 to 11: Ensure content is above overlay and layers */
     color: #f0e68c; /* Muted gold/cream for vintage text */
     max-width: 800px;
     margin: 0 auto;
@@ -82,7 +106,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 100;
+    z-index: 100; /* Ensure dots are always on top */
 }
 
 .nav-dot {
@@ -119,5 +143,12 @@
         background-color: rgba(0, 0, 0, 0.3); /* Add background for readability */
         padding: 10px 15px;
         border-radius: 20px;
+    }
+
+    /* Adjust size of bleeding elements for smaller screens */
+    .parallax-layer[data-is-bleeding="true"] {
+        width: 60vw !important; /* Example adjustment for smaller screens */
+        height: 80vh !important; /* Example adjustment for smaller screens */
+        top: -10vh !important; /* Example adjustment for smaller screens */
     }
 }

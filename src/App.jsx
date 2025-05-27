@@ -1,160 +1,167 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import Section from './components/section'; // Corrected path to section.jsx
-import './styles/main.css'; // Corrected path to main.css
+import Section from './components/section';
+import './styles/main.css';
 
-// Import your assets
+// Import your NEW assets (assuming you've placed them in src/assets)
+import mapBackground from './assets/map.jpg'; // For your main background
+import libertyPlaneMountain from './assets/liberty.png'; // For a mid/foreground element
+import stBasilPisa from './assets/piza.png'; // For another mid/foreground element
+import airshipBalloon from './assets/red air balloon.png'; // For your "sticking" bleeding foreground
+
+// Keep placeholders for other sections if you haven't designed them yet
 import placeholderJpg from './assets/placeholder.jpg';
 import reactSvg from './assets/react.svg';
 import robloxPng from './assets/roblox.png';
 import unknownPng from './assets/unknown.png';
 
 const App = () => {
-    // State to keep track of the currently active section
     const [activeSectionIndex, setActiveSectionIndex] = useState(0);
-    // Ref to the container holding all sections, used for scrolling
     const sectionsContainerRef = useRef(null);
-    // Ref to prevent multiple scroll events from firing rapidly
     const isScrollingRef = useRef(false);
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-    // Define the sections with their content and background layers
-    const sections = [
-        {
-            title: "The Grand Adventure Begins",
-            text: "Embark on a journey through time, exploring forgotten landscapes and tales from a bygone era. This travelogue captures the essence of exploration, painted with the hues of nostalgia.",
-            layers: [
-                { src: placeholderJpg, speed: 0.2, displayMode: 'cover', position: 'center' }, // Main background, slowest
-                { src: reactSvg, speed: 0.4, displayMode: 'contain', position: 'bottom right' }, // Floating element
-                { src: robloxPng, speed: 0.6, displayMode: 'contain', position: 'top left' } // Floating element, fastest
-            ]
-        },
+ const sections = [
+    {
+        title: "The Grand Adventure Begins",
+        text: "Embark on a journey through time, exploring forgotten landscapes and tales from a bygone era. This travelogue captures the essence of exploration, painted with the hues of nostalgia.",
+        layers: [
+            // Layer 1: The map background
+            { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+
+            // Layer 2: St. Basil's and Leaning Tower (from 5.jpg)
+            // It looks like these are mostly cut off at the bottom.
+            // Adjust position to bring them up, and size to control how large they appear.
+            { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
+            // ^ Try 'top center' or specific percentage 'x% y%'
+            // ^ Try different `size` values like '70% auto', '50% auto'
+
+            // Layer 3: Statue of Liberty, Plane, Mountain (from 4.jpg)
+            // These are also quite low.
+            { src: libertyPlaneMountain, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 10, size: '70% auto'},
+            // ^ Try 'bottom left', 'bottom right', or 'center' depending on desired spread.
+            // ^ Adjust `size` like '60% auto' or '90% auto'.
+
+            // Layer 4: The "sticking" foreground element (Airship, Hot Air Balloon, Buildings from 3.jpg)
+            // This is the main one that's overlapping.
+            // Make sure its `z` is suitable (e.g., z:1 or z:2 if you want it close).
+            // Adjust its position and size so it doesn't block the text.
+            { src: airshipBalloon, speed: -4.2, mouseSpeed: 0.05, objectFit: 'cover', position: 'center', z: 12, isBleeding: false, size: '100% auto'}
+            // ^ 'top center' might bring the airship/balloon higher.
+            // ^ Reduce `size` if it's too big, e.g., '80% auto' or '70% auto'.
+            // ^ You might want to use a specific `position` like '20% 50%' to fine-tune.
+        ]
+    },
         {
             title: "Whispers of Paris",
             text: "Cobblestone streets echoing with history, the scent of fresh croissants, and the timeless beauty of the Eiffel Tower. Paris, a city that always feels like a dream from the past.",
             layers: [
-                { src: placeholderJpg, speed: 0.2, displayMode: 'cover', position: 'center' },
-                { src: unknownPng, speed: 0.4, displayMode: 'contain', position: 'top' },
-                { src: robloxPng, speed: 0.6, displayMode: 'contain', position: 'bottom' }
             ]
         },
+        // ... (rest of your sections, updated similarly with your new images)
         {
             title: "Mysteries of the Orient Express",
             text: "A journey through breathtaking landscapes aboard a legendary train. Each click-clack of the wheels tells a story of intrigue and elegance, a true vintage escapade.",
             layers: [
-                { src: placeholderJpg, speed: 0.2, displayMode: 'cover', position: 'center' },
-                { src: reactSvg, speed: 0.4, displayMode: 'contain', position: 'center left' },
-                { src: unknownPng, speed: 0.6, displayMode: 'contain', position: 'center right' }
             ]
         },
         {
             title: "Echoes of Ancient Rome",
             text: "Walk amongst the ruins where emperors once stood, feeling the weight of centuries. Rome's ancient grandeur, a testament to enduring history and timeless beauty.",
             layers: [
-                { src: placeholderJpg, speed: 0.2, displayMode: 'cover', position: 'center' },
-                { src: robloxPng, speed: 0.4, displayMode: 'contain', position: 'bottom left' },
-                { src: reactSvg, speed: 0.6, displayMode: 'contain', position: 'top right' }
             ]
         },
         {
             title: "Serenity in the Scottish Highlands",
             text: "Misty lochs, rugged mountains, and ancient castles. The Highlands offer a serene escape, a place where time seems to stand still, wrapped in a blanket of timeless charm.",
             layers: [
-                { src: placeholderJpg, speed: 0.2, displayMode: 'cover', position: 'center' },
-                { src: unknownPng, speed: 0.4, displayMode: 'contain', position: 'center' },
-                { src: robloxPng, speed: 0.6, displayMode: 'contain', position: 'center' }
             ]
         }
     ];
 
+    // Removed the separate `foregroundElements` array as these are now integrated into `sections`
+
+    // Mouse movement listener
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+            setMousePos({ x: event.clientX, y: event.clientY });
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
     // Function to scroll to a specific section by its index
     const scrollToSection = useCallback((index) => {
         if (sectionsContainerRef.current && index >= 0 && index < sections.length) {
-            isScrollingRef.current = true; // Set flag to prevent rapid scrolling
+            isScrollingRef.current = true;
             const targetSection = sectionsContainerRef.current.children[index];
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setActiveSectionIndex(index);
 
-            // Reset scrolling flag after the scroll animation is likely complete
             setTimeout(() => {
                 isScrollingRef.current = false;
-            }, 800); // Adjust timeout based on scroll-behavior duration
+            }, 800);
         }
-    }, [sections.length]); // Dependency array for useCallback
+    }, [sections.length]);
 
-    // Handle scroll events (mouse wheel)
-    useEffect(() => {
-        const handleWheel = (event) => {
-            if (isScrollingRef.current) {
-                event.preventDefault(); // Prevent default scroll if already scrolling
-                return;
-            }
-
-            event.preventDefault(); // Prevent default browser scroll
-            const direction = event.deltaY > 0 ? 1 : -1; // 1 for down, -1 for up
-            let nextIndex = activeSectionIndex + direction;
-
-            // Clamp the index within valid bounds
-            if (nextIndex < 0) {
-                nextIndex = 0;
-            } else if (nextIndex >= sections.length) {
-                nextIndex = sections.length - 1;
-            }
-
-            if (nextIndex !== activeSectionIndex) {
-                scrollToSection(nextIndex);
-            }
-        };
-
-        // Attach scroll listener to the window
-        window.addEventListener('wheel', handleWheel, { passive: false });
-
-        // Cleanup the event listener on component unmount
-        return () => {
-            window.removeEventListener('wheel', handleWheel);
-        };
-    }, [activeSectionIndex, sections.length, scrollToSection]); // Dependencies for useEffect
-
-    // Parallax effect logic based on scroll position
+    // Combined Parallax effect logic (scroll and mouse)
     useEffect(() => {
         const sectionsContainer = sectionsContainerRef.current;
         if (!sectionsContainer) return;
 
         const applyParallax = () => {
             const scrollY = sectionsContainer.scrollTop; // Current scroll position of the container
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
 
-            // Iterate through all sections
+            // Calculate mouse offsets relative to viewport center
+            const mouseOffsetX = (mousePos.x - viewportWidth / 2);
+            const mouseOffsetY = (mousePos.y - viewportHeight / 2);
+
+            // Apply parallax to all layers within sections
             sections.forEach((sectionData, sectionIndex) => {
                 const sectionElement = sectionsContainer.children[sectionIndex];
                 if (!sectionElement) return;
 
-                const sectionTop = sectionElement.offsetTop; // Top position of the section relative to its scroll parent
+                const sectionTop = sectionElement.offsetTop;
                 const sectionHeight = sectionElement.offsetHeight;
-                const viewportHeight = sectionsContainer.clientHeight;
 
                 // Calculate how much the section is visible in the viewport
                 // 0 when section is completely below, 1 when section is completely above
                 const sectionScrollProgress = (scrollY - sectionTop + viewportHeight) / (viewportHeight + sectionHeight);
 
-                // Find all parallax layers within this specific section
                 const layers = sectionElement.querySelectorAll('.parallax-layer');
 
                 layers.forEach(layer => {
                     const speed = parseFloat(layer.dataset.speed);
-                    // Calculate translation based on scroll progress and layer speed
-                    // Adjust the multiplier (e.g., 200) to control the intensity of the parallax effect
-                    const yOffset = (sectionScrollProgress * speed * viewportHeight) - (speed * viewportHeight / 2); // Center effect
-                    layer.style.transform = `translateY(${yOffset}px)`;
+                    const mouseSpeed = parseFloat(layer.dataset.mouseSpeed);
+
+                    // Scroll-based Y translation for all layers
+                    // For `speed > 1`, this will make elements appear to "stick" and move faster
+                    const scrollYTranslate = (sectionScrollProgress * speed * viewportHeight) - (speed * viewportHeight / 2);
+
+                    // Mouse-based X and Y translation
+                    const mouseTranslateX = mouseOffsetX * mouseSpeed;
+                    const mouseTranslateY = mouseOffsetY * mouseSpeed;
+
+                    layer.style.transform = `translate3d(${mouseTranslateX}px, ${scrollYTranslate + mouseTranslateY}px, 0)`;
                 });
             });
+
+            // Removed the separate loop for `foregroundElements`
         };
 
+        // Re-run parallax on scroll and mouse move
         sectionsContainer.addEventListener('scroll', applyParallax);
-        // Also apply parallax initially in case of non-zero scroll on load
+        window.addEventListener('mousemove', applyParallax);
+
+        // Apply parallax initially
         applyParallax();
 
         return () => {
             sectionsContainer.removeEventListener('scroll', applyParallax);
+            window.removeEventListener('mousemove', applyParallax);
         };
-    }, [sections]); // Re-run if sections data changes
+    }, [sections, mousePos]); // Removed foregroundElements from dependencies
 
     // Handle navigation dot clicks
     const handleDotClick = (index) => {
@@ -179,25 +186,27 @@ const App = () => {
             <div
                 ref={sectionsContainerRef}
                 style={{
-                    position: 'fixed', // Position fixed to ensure it covers the viewport
+                    position: 'fixed',
                     top: 0,
                     left: 0,
-                    width: '100vw', // Ensure it takes full viewport width
-                    height: '100vh', // Ensure it takes full viewport height
-                    overflowY: 'scroll', // Enable vertical scrolling
-                    scrollBehavior: 'smooth', // Smooth scroll effect
-                    scrollSnapType: 'y mandatory', // Snap to sections
+                    width: '100vw',
+                    height: '100vh',
+                    overflowY: 'scroll',
+                    scrollBehavior: 'smooth',
+                    scrollSnapType: 'y mandatory',
                 }}
             >
                 {sections.map((section, index) => (
-                    <Section // Using the renamed Section component
+                    <Section
                         key={index}
                         id={`section-${index}`}
                         title={section.title}
                         text={section.text}
-                        layers={section.layers} // Pass the layers data to the Section component
+                        layers={section.layers}
                     />
                 ))}
+
+                {/* Removed the rendering of global bleeding foreground elements here */}
             </div>
         </>
     );
