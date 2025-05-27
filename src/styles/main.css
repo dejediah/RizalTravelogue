@@ -8,9 +8,6 @@
     justify-content: center;
     text-align: center;
     position: relative; /* Crucial for absolute positioning of layers */
-    /* REMOVED: overflow: hidden; from here to allow elements to bleed */
-    scroll-snap-align: start; /* For smooth snapping behavior */
-    scroll-snap-stop: always;
 }
 
 /* Styles for individual parallax background layers (within sections) */
@@ -27,6 +24,9 @@
 
 /* Specific styles for layers that should 'contain' their image */
 .parallax-layer[data-object-fit="contain"] {
+    /* This rule might be redundant if you're setting background-size inline in section.jsx.
+       If you want a default, keep it, otherwise, rely on inline style.
+       For the airshipBalloon, we'll set its size inline. */
     background-size: 30% auto; /* Default size for contained images */
     background-repeat: no-repeat;
 }
@@ -39,30 +39,30 @@
 
 /* NEW: Styles for foreground "bleeding" layers (now applied to parallax-layer) */
 .parallax-layer[data-is-bleeding="true"] {
-    /* These layers will be taller and positioned to visually connect sections */
-    height: 150vh; /* Make it taller than the section to bleed significantly */
-    top: -25vh; /* Adjust top to make it start higher and bleed from previous section */
-    /* You will need to fine-tune `height` and `top` based on your specific image and desired effect */
+    height: 100vh;
+    top: 10vh; 
 }
 
-/* NEW: Wrapper for non-bleeding content and layers */
+/* The main container for all text content, and the darkening overlay */
 .section-inner-content-wrapper {
-    position: absolute; /* Position it relative to .parallax-section */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* THIS IS THE KEY! It clips non-bleeding content within the section */
-    pointer-events: none; 
-    z-index: 80;/* Allow events to pass through, though content is within overlay */
+    overflow: hidden; /* This clips regular (non-bleeding) parallax layers within the section */
+    pointer-events: none; /* Allow events to pass through to elements behind it */
+    /* CRITICAL Z-INDEX: This ensures all its contents (overlay, text) are
+       ABOVE background parallax layers, but BELOW "bleeding" foreground layers if desired. */
+    z-index: 90; /* Keeping it at 90 for the content wrapper */
 }
 
 /* Styles for the overlay and content */
 .parallax-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity from 0.4 to 0.6 for better text readability */
+    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better readability */
     width: 100%;
     height: 100%;
-    position: absolute; /* Position over layers */
+    position: absolute; /* Position over layers within section-inner-content-wrapper */
     top: 0;
     left: 0;
     display: flex;
@@ -71,17 +71,22 @@
     justify-content: center;
     padding: 2rem;
     box-sizing: border-box;
-    z-index: 10; /* Changed from 0 to 10: Place overlay above all parallax layers */
-    pointer-events: auto; /* Allow interaction with content */
+    /* This z-index is relative to its parent (.section-inner-content-wrapper).
+       It should be *lower* than .section-content. */
+    z-index: 10;
+    pointer-events: auto; /* Re-enable pointer events for the overlay */
 }
 
 .section-content {
-    z-index: 100; /* Changed from 10 to 11: Ensure content is above overlay and layers */
-    color: #f0e68c; /* Muted gold/cream for vintage text */
+    /* This z-index is relative to its parent (.parallax-overlay).
+       It must be *higher* than .parallax-overlay. */
+    z-index: 20;
+    color: #f0e68c;
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem; /* Added padding for smaller screens */
-    border-radius: 8px; /* Rounded corners for content box */
+    padding: 1rem;
+    border-radius: 8px;
+    pointer-events: auto; /* Re-enable pointer events for the content */
 }
 
 .section-title {
@@ -106,7 +111,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 100; /* Ensure dots are always on top */
+    z-index: 100; /* Highest to always be on top */
 }
 
 .nav-dot {
@@ -147,8 +152,10 @@
 
     /* Adjust size of bleeding elements for smaller screens */
     .parallax-layer[data-is-bleeding="true"] {
-        width: 60vw !important; /* Example adjustment for smaller screens */
-        height: 80vh !important; /* Example adjustment for smaller screens */
-        top: -10vh !important; /* Example adjustment for smaller screens */
+        /* Reduce bleed amount on smaller screens if necessary */
+        height: 100vh !important; /* Example adjustment */
+        top: 0vh !important; /* Example adjustment */
+        width: 80vw !important; /* Adjusted width for mobile to prevent cutoff */
+        background-size: contain !important; /* Ensure image fits on smaller screens */
     }
 }
