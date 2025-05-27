@@ -22,8 +22,7 @@ const App = () => {
 
  const sections = [
     {
-        title: "The Grand Adventure Begins",
-        text: "Embark on a journey through time, exploring forgotten landscapes and tales from a bygone era. This travelogue captures the essence of exploration, painted with the hues of nostalgia.",
+        title: "Maagang Buhay at Edukasyon (1861-1882)",
         layers: [
             // Layer 1: The map background
             { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
@@ -52,28 +51,35 @@ const App = () => {
         ]
     },
         {
-            title: "Whispers of Paris",
-            text: "Cobblestone streets echoing with history, the scent of fresh croissants, and the timeless beauty of the Eiffel Tower. Paris, a city that always feels like a dream from the past.",
+            title: "Calamba, Laguna (1861-1872): 1. Ang pagkabata at maagang edukasyon ni Rizal.",
+            text: "Si Jose Protacio Rizal Mercado y Alonzo Realonda o mas kilalang Jose Rizal ay isinilang noong ika-19 ng Hunyo 1861 sa Calamba Laguna. Galing si Jose Rizal sa isang edukado at maykayang pamilya na pinangungunahan ng kanyang ama na si Don Francisco Mercado at ina niyang si Doña Teodora Alonzo. Sa murang edad pa lamang ay ipinakita na ni Rizal ang kanyang katalinuhan, pagiging mapagmasid, at pagkahilig sa pagbabasa at pagsusulat. Tinuruan siya ng kanyang ina sa pagbasa at pagdarasal. Sa tulong ng mga pribadong guro at ng kanyang sariling determinsayon, natutunana ni Rizal ang mga batayang asignatura tulad na lamang ng Latin, Kastila, at Matematika.",
             layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+
             ]
         },
         // ... (rest of your sections, updated similarly with your new images)
         {
-            title: "Mysteries of the Orient Express",
-            text: "A journey through breathtaking landscapes aboard a legendary train. Each click-clack of the wheels tells a story of intrigue and elegance, a true vintage escapade.",
+            title: "Ateneo de Manila (1872-1877): Ang sekondaryang edukasyon ni Rizal.",
+            text: "Matapos ang pagkamatay ni Gomburza noong 1872, ipinasok si Rizal sa Ateneo Municapal de Manila. Bagama’t noong una ay hindi siya tinanggap dahil sa kanyang pagiging “Indio”, natanggap siya dahil sa rekomendasyon ng isang pamilyar sa kanyang ina. Sa Ateneo, si Rizal ay naging “interno” at di-naglaon ay naging isa sa mga pinakamasigasig na mag-aaral. Natapos siya ng Batsilyer ng Sining at may pinakamataas na karangalan. Dito rin nahasa si Rizal sa larangan ng literatura, sining, agham, at relihiyon. Sumulat siya ng mga tula gaya ng “Sa Aking Mga Kabata” at iba pang akdang nagpapakita ng kanyang pambihirang pag-iisip sa murang edad. Kasabay nito, natutunan niya ang kahalagahan ng disiplina, pagiging makatao, at pagmamahal sa inang bayan.",
             layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+
             ]
         },
         {
-            title: "Echoes of Ancient Rome",
-            text: "Walk amongst the ruins where emperors once stood, feeling the weight of centuries. Rome's ancient grandeur, a testament to enduring history and timeless beauty.",
+            title: "University of Santo Tomas (1877-1882): Ang edukasyon ni Rizal sa unibersidad.",
+            text: "Nagpatuloy si Rizal sa Unibersidad ng Santo Tomas kung saan una niyang kinuha ang kursong Filosofía y Letras bago nagpasya na ipagpatuloy ang medisina upang matulungan ang kanyang inang unti-unting nawawalan ng paningin. Sa UST, naranasan niya ang diskriminasyon ng mga prayle at opisyal sa mga katutubong mag-aaral. Dahil dito, mas tumibay ang kanyang damdaming makabayan at pagkadismaya sa umiiral na sistema. Kasabay ng kanyang pag-aaral, aktibo rin si Rizal sa pagsusulat, pagpapadala ng tula at sanaysay sa pahayagan, at pag-oobserba sa mga hindi makatarungang kalakaran sa lipunan.",
             layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+
             ]
         },
         {
-            title: "Serenity in the Scottish Highlands",
-            text: "Misty lochs, rugged mountains, and ancient castles. The Highlands offer a serene escape, a place where time seems to stand still, wrapped in a blanket of timeless charm.",
+            title: "Paglalakbay at Pagkadestiyero  (1882-1896)",
             layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+
             ]
         }
     ];
