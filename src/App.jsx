@@ -2,65 +2,123 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Section from './components/section';
 import './styles/main.css';
 
-// Import your NEW assets (assuming you've placed them in src/assets)
-import mapBackground from './assets/map.jpg'; // For your main background
-import libertyPlaneMountain from './assets/liberty.png'; // For a mid/foreground element
-import stBasilPisa from './assets/piza.png'; // For another mid/foreground element
-import airshipBalloon from './assets/red air balloon.png'; // For your "sticking" bleeding foreground
+// Import your NEW assets
+import mapBackground from './assets/map.jpg';
+import libertyPlaneMountain from './assets/liberty.png';
+import stBasilPisa from './assets/piza.png';
+import airshipBalloon from './assets/red air balloon.png';
+import bookbg from './assets/bookbg.png';
+import bookmg from './assets/bookmg.png';
+import bookfg1 from './assets/bookfg1.png';
+import bookstick1 from './assets/bookstick1.png';
+import bookstick2 from './assets/bookstick2.png';
+import bgp3 from './assets/bgp3.png';
+import mgp3 from './assets/mgp3.png';
+import mg2p3 from './assets/mg2p3.png';
+import p3fg1 from './assets/p3fg1.png';
+import p3fg2 from './assets/p3fg2.png';
 
-// Keep placeholders for other sections if you haven't designed them yet
 import placeholderJpg from './assets/placeholder.jpg';
 import reactSvg from './assets/react.svg';
 import robloxPng from './assets/roblox.png';
-import unknownPng from './assets/unknown.png';
 
 const App = () => {
     const [activeSectionIndex, setActiveSectionIndex] = useState(0);
     const sectionsContainerRef = useRef(null);
-    const isScrollingRef = useRef(false);
+    const isAnimatingScrollRef = useRef(false); // Flag for programmatic scroll animation
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
- const sections = [
+    const sections = [
+        {
+            title: "joserizal",
+            text: "Embark on a journey through time, exploring forgotten landscapes and tales from a bygone era. This travelogue captures the essence of exploration, painted with the hues of nostalgia.",
+            layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
+                { src: libertyPlaneMountain, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 10, size: '70% auto'},
+                {
+                    src: airshipBalloon,
+                    speed: -0.2,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'center',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0
+                }
+            ]
+        },
     {
         title: "Maagang Buhay at Edukasyon (1861-1882)",
-        layers: [
-            // Layer 1: The map background
-            { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
-
-            // Layer 2: St. Basil's and Leaning Tower (from 5.jpg)
-            // It looks like these are mostly cut off at the bottom.
-            // Adjust position to bring them up, and size to control how large they appear.
-            { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
-            // ^ Try 'top center' or specific percentage 'x% y%'
-            // ^ Try different `size` values like '70% auto', '50% auto'
-
-            // Layer 3: Statue of Liberty, Plane, Mountain (from 4.jpg)
-            // These are also quite low.
-            { src: libertyPlaneMountain, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 10, size: '70% auto'},
-            // ^ Try 'bottom left', 'bottom right', or 'center' depending on desired spread.
-            // ^ Adjust `size` like '60% auto' or '90% auto'.
-
-            // Layer 4: The "sticking" foreground element (Airship, Hot Air Balloon, Buildings from 3.jpg)
-            // This is the main one that's overlapping.
-            // Make sure its `z` is suitable (e.g., z:1 or z:2 if you want it close).
-            // Adjust its position and size so it doesn't block the text.
-            { src: airshipBalloon, speed: -4.2, mouseSpeed: 0.05, objectFit: 'cover', position: 'center', z: 12, isBleeding: false, size: '100% auto'}
-            // ^ 'top center' might bring the airship/balloon higher.
-            // ^ Reduce `size` if it's too big, e.g., '80% auto' or '70% auto'.
-            // ^ You might want to use a specific `position` like '20% 50%' to fine-tune.
+            layers: [
+                { src: bookmg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'top center', z: 10},
+                { src: bookbg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '100% auto' },
+                { src: bookfg1, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 11, size: '100% auto', offsetY: -50},
+                {
+                    src: bookstick1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '50% auto',
+                    brightness: 1.0,
+                    offsetX: -100,
+                    offsetY: 150
+                },
+                {
+                    src: bookstick2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetX: 350,
+                    offsetY: 270
+                }
         ]
     },
         {
             title: "Calamba, Laguna (1861-1872): 1. Ang pagkabata at maagang edukasyon ni Rizal.",
             text: "Si Jose Protacio Rizal Mercado y Alonzo Realonda o mas kilalang Jose Rizal ay isinilang noong ika-19 ng Hunyo 1861 sa Calamba Laguna. Galing si Jose Rizal sa isang edukado at maykayang pamilya na pinangungunahan ng kanyang ama na si Don Francisco Mercado at ina niyang si Doña Teodora Alonzo. Sa murang edad pa lamang ay ipinakita na ni Rizal ang kanyang katalinuhan, pagiging mapagmasid, at pagkahilig sa pagbabasa at pagsusulat. Tinuruan siya ng kanyang ina sa pagbasa at pagdarasal. Sa tulong ng mga pribadong guro at ng kanyang sariling determinsayon, natutunana ni Rizal ang mga batayang asignatura tulad na lamang ng Latin, Kastila, at Matematika.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
-
+                { src: bgp3, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'top center', z: -2},
+                { src: mg2p3, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -1, size: '100% auto' },
+                { src: mgp3, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'center', z: 10, size: '100% auto' },
+                {
+                    src: p3fg1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '70% auto',
+                    brightness: 1.0,
+                    offsetX: -70,
+                    offsetY: 150
+                },
+                {
+                    src: p3fg2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetX: 275,
+                    offsetY: 225
+                }
             ]
         },
-        // ... (rest of your sections, updated similarly with your new images)
         {
-            title: "Ateneo de Manila (1872-1877): Ang sekondaryang edukasyon ni Rizal.",
+          title: "Ateneo de Manila (1872-1877): Ang sekondaryang edukasyon ni Rizal.",
             text: "Matapos ang pagkamatay ni Gomburza noong 1872, ipinasok si Rizal sa Ateneo Municapal de Manila. Bagama’t noong una ay hindi siya tinanggap dahil sa kanyang pagiging “Indio”, natanggap siya dahil sa rekomendasyon ng isang pamilyar sa kanyang ina. Sa Ateneo, si Rizal ay naging “interno” at di-naglaon ay naging isa sa mga pinakamasigasig na mag-aaral. Natapos siya ng Batsilyer ng Sining at may pinakamataas na karangalan. Dito rin nahasa si Rizal sa larangan ng literatura, sining, agham, at relihiyon. Sumulat siya ng mga tula gaya ng “Sa Aking Mga Kabata” at iba pang akdang nagpapakita ng kanyang pambihirang pag-iisip sa murang edad. Kasabay nito, natutunan niya ang kahalagahan ng disiplina, pagiging makatao, at pagmamahal sa inang bayan.",
             layers: [
                 { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
@@ -72,19 +130,15 @@ const App = () => {
             text: "Nagpatuloy si Rizal sa Unibersidad ng Santo Tomas kung saan una niyang kinuha ang kursong Filosofía y Letras bago nagpasya na ipagpatuloy ang medisina upang matulungan ang kanyang inang unti-unting nawawalan ng paningin. Sa UST, naranasan niya ang diskriminasyon ng mga prayle at opisyal sa mga katutubong mag-aaral. Dahil dito, mas tumibay ang kanyang damdaming makabayan at pagkadismaya sa umiiral na sistema. Kasabay ng kanyang pag-aaral, aktibo rin si Rizal sa pagsusulat, pagpapadala ng tula at sanaysay sa pahayagan, at pag-oobserba sa mga hindi makatarungang kalakaran sa lipunan.",
             layers: [
                 { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
-
             ]
         },
         {
             title: "Paglalakbay at Pagkadestiyero  (1882-1896)",
             layers: [
                 { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
-
             ]
         }
     ];
-
-    // Removed the separate `foregroundElements` array as these are now integrated into `sections`
 
     // Mouse movement listener
     useEffect(() => {
@@ -95,44 +149,82 @@ const App = () => {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
+    // Custom smooth scroll animation function
+    const animateScroll = useCallback((targetScrollTop, duration = 800) => {
+        const container = sectionsContainerRef.current;
+        if (!container) {
+            console.error('animateScroll: Container ref is null.');
+            isAnimatingScrollRef.current = false; // Ensure flag is false if container is missing
+            return;
+        }
+
+        if (isAnimatingScrollRef.current) {
+            console.log('animateScroll: Animation already in progress, skipping new one.');
+            return;
+        }
+
+        isAnimatingScrollRef.current = true; // Set flag to true
+        const startScrollTop = container.scrollTop;
+        const startTime = performance.now();
+
+        const easeInOutCubic = (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        const step = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeInOutCubic(progress);
+
+            container.scrollTop = startScrollTop + (targetScrollTop - startScrollTop) * easedProgress;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                isAnimatingScrollRef.current = false; // Reset flag
+                container.scrollTop = targetScrollTop; // Ensure final position is exact
+                console.log('Scroll animation finished. Final scroll top:', container.scrollTop);
+            }
+        };
+
+        requestAnimationFrame(step);
+    }, []); // No dependencies for this function
+
     // Function to scroll to a specific section by its index
     const scrollToSection = useCallback((index) => {
         if (sectionsContainerRef.current && index >= 0 && index < sections.length) {
-            isScrollingRef.current = true;
             const targetSection = sectionsContainerRef.current.children[index];
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setActiveSectionIndex(index);
-
-            setTimeout(() => {
-                isScrollingRef.current = false;
-            }, 800);
+            if (targetSection) {
+                const targetOffsetTop = targetSection.offsetTop;
+                console.log(`scrollToSection: Initiating scroll to section ${index} (target: ${targetOffsetTop})`);
+                animateScroll(targetOffsetTop);
+                // The activeSectionIndex will be updated by IntersectionObserver when scroll finishes.
+                // Or you could set it immediately here if you prefer immediate dot feedback:
+                // setActiveSectionIndex(index);
+            } else {
+                console.warn(`scrollToSection: Target section ${index} not found.`);
+            }
         }
-    }, [sections.length]);
+    }, [sections.length, animateScroll]); // Dependencies for useCallback: sections.length for bounds, animateScroll function
 
-    // Combined Parallax effect logic (scroll and mouse)
+    // Parallax effect logic
     useEffect(() => {
         const sectionsContainer = sectionsContainerRef.current;
         if (!sectionsContainer) return;
 
         const applyParallax = () => {
-            const scrollY = sectionsContainer.scrollTop; // Current scroll position of the container
+            const scrollY = sectionsContainer.scrollTop;
             const viewportWidth = window.innerWidth;
             const viewportHeight = window.innerHeight;
 
-            // Calculate mouse offsets relative to viewport center
             const mouseOffsetX = (mousePos.x - viewportWidth / 2);
             const mouseOffsetY = (mousePos.y - viewportHeight / 2);
 
-            // Apply parallax to all layers within sections
             sections.forEach((sectionData, sectionIndex) => {
                 const sectionElement = sectionsContainer.children[sectionIndex];
                 if (!sectionElement) return;
 
                 const sectionTop = sectionElement.offsetTop;
-                const sectionHeight = sectionElement.offsetHeight;
+                const sectionHeight = sectionElement.offsetHeight; // Used in your preferred formula
 
-                // Calculate how much the section is visible in the viewport
-                // 0 when section is completely below, 1 when section is completely above
                 const sectionScrollProgress = (scrollY - sectionTop + viewportHeight) / (viewportHeight + sectionHeight);
 
                 const layers = sectionElement.querySelectorAll('.parallax-layer');
@@ -141,38 +233,128 @@ const App = () => {
                     const speed = parseFloat(layer.dataset.speed);
                     const mouseSpeed = parseFloat(layer.dataset.mouseSpeed);
 
-                    // Scroll-based Y translation for all layers
-                    // For `speed > 1`, this will make elements appear to "stick" and move faster
+                    const initialOffsetX = parseFloat(layer.dataset.offsetX) || 0;
+                    const initialOffsetY = parseFloat(layer.dataset.offsetY) || 0;
+
                     const scrollYTranslate = (sectionScrollProgress * speed * viewportHeight) - (speed * viewportHeight / 2);
 
-                    // Mouse-based X and Y translation
                     const mouseTranslateX = mouseOffsetX * mouseSpeed;
                     const mouseTranslateY = mouseOffsetY * mouseSpeed;
 
-                    layer.style.transform = `translate3d(${mouseTranslateX}px, ${scrollYTranslate + mouseTranslateY}px, 0)`;
+                    layer.style.transform = `translate3d(${mouseTranslateX + initialOffsetX}px, ${scrollYTranslate + mouseTranslateY + initialOffsetY}px, 0)`;
                 });
             });
-
-            // Removed the separate loop for `foregroundElements`
         };
 
-        // Re-run parallax on scroll and mouse move
         sectionsContainer.addEventListener('scroll', applyParallax);
         window.addEventListener('mousemove', applyParallax);
 
-        // Apply parallax initially
-        applyParallax();
+        applyParallax(); // Initial call
 
         return () => {
             sectionsContainer.removeEventListener('scroll', applyParallax);
             window.removeEventListener('mousemove', applyParallax);
         };
-    }, [sections, mousePos]); // Removed foregroundElements from dependencies
+    }, [sections, mousePos]);
+
+    // Wheel event listener for custom smooth snapping (now handles throttle and direct scroll)
+    useEffect(() => {
+        const sectionsContainer = sectionsContainerRef.current;
+        if (!sectionsContainer) return;
+
+        const SCROLL_THROTTLE_DELAY = 900; // Milliseconds to wait before allowing another wheel scroll
+
+        const handleWheel = (event) => {
+            event.preventDefault(); // Crucial: Prevent default browser scroll
+
+            const currentTime = performance.now();
+            // This throttle prevents rapid-fire wheel events from causing multiple animations
+            if (isAnimatingScrollRef.current || (currentTime - sectionsContainerRef.current.__lastWheelScrollTime < SCROLL_THROTTLE_DELAY)) {
+                console.log('handleWheel: Throttled or animation in progress, ignoring wheel event.');
+                return;
+            }
+
+            // Store the last time a valid wheel scroll was processed
+            sectionsContainerRef.current.__lastWheelScrollTime = currentTime;
+
+            let targetIndex = activeSectionIndex;
+            if (event.deltaY > 0) { // Scrolling down
+                targetIndex = Math.min(sections.length - 1, activeSectionIndex + 1);
+            } else { // Scrolling up
+                targetIndex = Math.max(0, activeSectionIndex - 1);
+            }
+
+            if (targetIndex !== activeSectionIndex) {
+                console.log(`handleWheel: Scrolling from ${activeSectionIndex} to ${targetIndex}`);
+                // Update active index immediately for dot feedback
+                setActiveSectionIndex(targetIndex);
+                // Directly trigger the scroll
+                scrollToSection(targetIndex);
+            } else {
+                console.log(`handleWheel: Staying on section ${activeSectionIndex}.`);
+            }
+        };
+
+        // Initialize lastWheelScrollTime on the ref object itself
+        sectionsContainerRef.current.__lastWheelScrollTime = 0; // Or better, put it in a separate ref like lastScrollTimeRef
+
+        sectionsContainer.addEventListener('wheel', handleWheel, { passive: false });
+
+        return () => {
+            sectionsContainer.removeEventListener('wheel', handleWheel);
+        };
+    }, [activeSectionIndex, sections.length, scrollToSection, isAnimatingScrollRef]); // Added isAnimatingScrollRef to dependencies
+
+    // IntersectionObserver to update activeSectionIndex on manual drag scroll
+    useEffect(() => {
+        const sectionsContainer = sectionsContainerRef.current;
+        if (!sectionsContainer) return;
+
+        const observerOptions = {
+            root: sectionsContainer,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    const index = parseInt(id.replace('section-', ''));
+                    // Only update if not currently animating (programmatic scroll)
+                    // This allows manual drags to update the active dot.
+                    if (!isAnimatingScrollRef.current && index !== activeSectionIndex) {
+                        setActiveSectionIndex(index);
+                        console.log('IntersectionObserver: Updated activeSectionIndex to:', index);
+                    }
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        sections.forEach((_, index) => {
+            const sectionElement = sectionsContainer.children[index];
+            if (sectionElement) {
+                observer.observe(sectionElement);
+            }
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [sections, activeSectionIndex, isAnimatingScrollRef]); // Added isAnimatingScrollRef to dependencies
 
     // Handle navigation dot clicks
-    const handleDotClick = (index) => {
-        scrollToSection(index);
-    };
+    const handleDotClick = useCallback((index) => {
+        if (!isAnimatingScrollRef.current) { // Prevent clicks during an ongoing animation
+            console.log(`Dot click: Scrolling to section ${index}`);
+            setActiveSectionIndex(index); // Update state for dot to become active
+            scrollToSection(index); // Directly initiate the scroll
+        } else {
+            console.log('Dot click ignored: Animation in progress.');
+        }
+    }, [isAnimatingScrollRef, scrollToSection]); // Dependencies: isAnimatingScrollRef and scrollToSection
 
     return (
         <>
@@ -198,8 +380,9 @@ const App = () => {
                     width: '100vw',
                     height: '100vh',
                     overflowY: 'scroll',
-                    scrollBehavior: 'smooth',
-                    scrollSnapType: 'y mandatory',
+                    // scrollBehavior: 'smooth', // Handled by JS now
+                    // scrollSnapType: 'y mandatory', // Handled by JS now
+                    WebkitOverflowScrolling: 'touch' // For smoother scrolling on iOS devices
                 }}
             >
                 {sections.map((section, index) => (
@@ -211,8 +394,6 @@ const App = () => {
                         layers={section.layers}
                     />
                 ))}
-
-                {/* Removed the rendering of global bleeding foreground elements here */}
             </div>
         </>
     );
