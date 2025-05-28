@@ -23,6 +23,41 @@ import ateneomg2 from './assets/ateneomg2.png';
 import ateneomg3 from './assets/ateneomg3.png';
 import ateneosticky1 from './assets/ateneosticky1.png';
 import ateneosticky2 from './assets/ateneosticky2.png';
+import ustbg from './assets/ustbg.png';
+import ustfg1 from './assets/ustfg1.png';
+import ustfg2 from './assets/ustfg2.png';
+import ustmg1 from './assets/ustmg1.png';
+import ustmg2 from './assets/ustmg2.png';
+import lakbaybg from './assets/lakbaybg.png';
+import lakbaymg1 from './assets/lakbaymg1.png';
+import lakbaysticky1 from './assets/lakbaysticky1.png';
+import lakbaysticky2 from './assets/lakbaysticky2.png';
+import lakbayfg from './assets/lakbayfg.png';
+import sgbg from './assets/sgbg.png';
+import sgmg1 from './assets/sgmg1.png';
+import sgmg2 from './assets/sgmg2.png';
+import sgsticky1 from './assets/sgsticky1.png';
+import sgsticky2 from './assets/sgsticky2.png';
+import sribg from './assets/sribg.png';
+import srimg1 from './assets/srimg1.png';
+import srimg2 from './assets/srimg2.png';
+import sristicky1 from './assets/sristicky1.png';
+import sristicky2 from './assets/sristicky2.png';
+import egpbg from './assets/egpbg.png';
+import egpmg1 from './assets/egpmg1.png';
+import egpmg2 from './assets/egpmg2.png';
+import egpfg from './assets/egpfg.png';
+import egpstick from './assets/egpstick.png';
+import itlbg from './assets/itlbg.png';
+import itlmg1 from './assets/itlmg1.png';
+import itlmg2 from './assets/itlmg2.png';
+import itlstick1 from './assets/itlstick1.png';
+import itlstick2 from './assets/itlstick2.png';
+import frbg from './assets/frbg.png';
+import frmg from './assets/frmg.png';
+import frfg from './assets/frfg.png';
+import frstick from './assets/frstick.png';
+
 
 const App = () => {
     const [activeSectionIndex, setActiveSectionIndex] = useState(0);
@@ -31,8 +66,8 @@ const App = () => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const sections = [
         {
-            title: "joserizal",
-            text: "Embark on a journey through time, exploring forgotten landscapes and tales from a bygone era. This travelogue captures the essence of exploration, painted with the hues of nostalgia.",
+            title: "Jose Rizal: Lakbay-Buhay",
+            text: "Tuklasin ang buhay ni Rizal gamit ang aming interactive na travelogue.",
             layers: [
                 { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
                 { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
@@ -171,29 +206,103 @@ const App = () => {
             title: "University of Santo Tomas (1877-1882): Ang edukasyon ni Rizal sa unibersidad.",
             text: "Nagpatuloy si Rizal sa Unibersidad ng Santo Tomas kung saan una niyang kinuha ang kursong Filosofía y Letras bago nagpasya na ipagpatuloy ang medisina upang matulungan ang kanyang inang unti-unting nawawalan ng paningin. Sa UST, naranasan niya ang diskriminasyon ng mga prayle at opisyal sa mga katutubong mag-aaral. Dahil dito, mas tumibay ang kanyang damdaming makabayan at pagkadismaya sa umiiral na sistema. Kasabay ng kanyang pag-aaral, aktibo rin si Rizal sa pagsusulat, pagpapadala ng tula at sanaysay sa pahayagan, at pag-oobserba sa mga hindi makatarungang kalakaran sa lipunan.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: ustbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'top center', z: -5},
+                { src: ustmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: ustmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: -3, size: '100% auto' },
+                {
+                    src: ustfg1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: false,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: -700,
+                    offsetY: 200,
+                },
+                {
+                    src: ustfg2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'center',
+                    z: 91,
+                    isBleeding: false,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetY: 0
+                }
             ]
         },
         {
             title: "Paglalakbay at Pagkadestiyero  (1882-1896)",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
-<<<<<<< HEAD
-=======
-                { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
-                { src: libertyPlaneMountain, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 10, size: '70% auto'},
-                { src: airshipBalloon, speed: -4.2, mouseSpeed: 0.05, objectFit: 'cover', position: 'center', z: 12, isBleeding: false, size: '100% auto'}
-
-
-
->>>>>>> 5ee82f9a6b0a160783897af3ea2e84dfee6895dc
+                { src: lakbaybg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'top center', z: -5},
+                { src: lakbaymg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: lakbayfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 11, size: '100% auto' },
+                {
+                    src: lakbaysticky1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: -450,
+                    offsetY: 350,
+                },
+                {
+                    src: lakbaysticky2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: 450,
+                    offsetY: 175,
+                }
             ]
         },
         {
             title: "Singapore (1882): Ang unang banyagang lupaing napuntahan ni Rizal (Bapor Salvador)",
             text: "Sa paglalakbay, maingat na pinagmasdan ni Rizal ang labing-anim na pasahero ng bapor Salvadora, siya lamang ang Pilipino habang ang iba ay Kastila, Briton, at Itim na Indiyano. Nakipagkaibigan siya sa kapitan, Donato Lecha, at nilaro ang ahedres para maibsan ang pagkabagot, kung saan madalas niyang talunin ang iba. Noong Mayo 1882 ang naging unang tapak ni Jose Rizal sa dayuhang lupa. Dumaong ang bapor Savadora sa Singapore kung saan siya ay nagkaroon ng dalawang araw na panandaliang hintuan. Siya ay nanatili sa Hotel de la Paz at nilibot niya ang lugar sakay ng karwahe, binisita ang mga pook gaya ng isang paaralan, ang mga magagandang templo ng Buddhismo, ang sikat na Botanical Garden, mga mataong distrito ng pamilihan at ang  rebulto ni Sir Thomas Stamford Raffles na siyang tagapagtatag ng Singapore. Sa kanyang maikling pananatili, napagmasdan ni Rizal ang kaayusan, kalinisan, at episyenteng pamahalaan sa ilalim ng mga Briton. Bagama’t panandalian lamang ang pananatili, ito ang kanyang unang karanasan sa isang kolonyal na pamahalaang hindi Espanyol—na nagbigay sa kanya ng paghahambing sa katiwalian at kabulukan ng sistemang kolonyal sa Pilipinas.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: sgbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '75% auto'},
+                { src: sgmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: sgmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
+                {
+                    src: sgsticky1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: -200,
+                    offsetY: 180,
+                },
+                {
+                    src: sgsticky2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: 300,
+                    offsetY: 175,
+                }
             ]
         },
 
@@ -201,7 +310,35 @@ const App = () => {
             title: "Sri Lanka (Ceylon) (1882): Pagdaan ni Rizal sa Timog Asya (Bapor Djemnah)",
             text: "Lumipat sa isang mas malaki at mas malinis na barko, ang bapor Prances Djemnah, ang mga pasaherong pasasa-Europa. Habang sakay sa bapor Prances Djemnah ay nahasa niya ang kanyang kaalaman sa wikang Pranses dahil ang mga pasahero ay nagsasalita ng Pranses. Kung kaya’t araw-araw siyang nakipag-usap sa kanila gamit ang halo-halong Espanyol at Latin, pati na rin ng pagguhit sa papel upang magkaintindihan. Bilang bahagi ng rutang pandagat patungong Europa, dumaan si Rizal sa Ceylon (kasalukuyang Sri Lanka). Noong Mayo 17, dumating ang bapor Djemnah sa Point Galle, isang baybaying bayan sa timog ng Ceylon, ngunit hindi ito nagustuhan ni Rizal. Kinabukasan, ipinagpatuloy ang paglalakbay patungong Colombo, ang kabisera ng Ceylon. Pagkalipas ng ilang oras ng paglalayag, narating niya ang lungsod at namangha siya sa magagandang tanawin at magagarbong mga gusali nito. Nakita niya sa Ceylon ang mga kakaibang kalinangan at kultura ng mga tao na taga-roon na lubhang naiiba sa mga kolonyang Espanyol. Sa kanyang Travel Diary, inilalarawan ni Rizal ang init ng klima at ang tanawin ng mga estrukturang Asyano na may impluwensyang Hindu at Islamiko. Bagama’t hindi siya nanatili nang matagal sa Ceylon, ang kanyang obserbasyon sa kanilang pamumuhay ay nagbukas ng kanyang kaisipan sa posibilidad na maunlad at maayos ang pamumuhay ng mga Asyano sa labas ng kolonyal na pamahalaang Espanyol.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: sribg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '75% auto'},
+                { src: srimg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: srimg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
+                {
+                    src: sristicky1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetX: -100,
+                    offsetY: 275,
+                },
+                {
+                    src: sristicky2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 300,
+                    offsetY: 305,
+                }
             ]
         },
 
@@ -209,7 +346,22 @@ const App = () => {
             title: "Egypt - 1882: (Bapor Djemnah)",
             text: "Mula sa Colombo, ipinagpatuloy ng bapor Djemnah ang paglalakbay patatawid sa Karagatang Indian hanggang sa baybayin ng Cape sa Africa. Unang nasilayan ni Rizal ang di-masukal na baybayin ng Africa, na tinawag niyang ‘isang di-kaaya-ayang lupain ngunit kilala.’ Sa lungsod ng Aden, napansin niyang mas mainit ang klima kaysa sa Maynila, at natuwa siyang makita ang mga kamelyo na unang pagkakataon din niyang nakita. Nagpatuloy ang barko patungo sa Lungsod ng Suez, ang Red Sea terminal ng Suez Canal. Pagdating doon, bumaba ng barko si Rizal upang mamasyal. Pinakanamangha siya sa kagandahan ng liwanag ng buwan, na nagpaalala sa kanya sa Calamba at sa kanyang  pamilya. Tumagal ng limang araw ang paglalakbay ng Djemnah sa Suez Canal, na isang bagong karanasan para sa kanya. Pagdating sa Port Said, bumaba siya upang mamasyal at humanga sa tanawin. Namangha rin si Rizal sa pagkakaroon ng mga taong mula sa iba't ibang lahi na nagsasalita ng iba't ibang mga wika. Ang mga karanasang ito ay nagbigay kay Rizal ng mas malawak na pag-unawa sa pagkakaiba-iba ng tao, kultura, at wika sa labas ng Pilipinas. Nakita niya na maraming paraan ng pamumuhay at pananaw sa mundo na naiiba sa karanasan niya sa ilalim ng kolonyalismong Espanyol.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: egpbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '75% auto'},
+                { src: egpmg1, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: egpmg2, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
+                { src: egpfg, speed: -0.6, mouseSpeed: 0.04, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
+                {
+                    src: egpstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'center',
+                    z: 91,
+                    isBleeding: false,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetY: 500,
+                }
             ]
         },
 
@@ -217,7 +369,35 @@ const App = () => {
             title: "Italy - 1882: (Bapor Djemnah)",
             text: "Noong Hunyo 11, 1882, bumaba si Rizal sa barko at, kasama ang isang gabay, naglibot sa Lungsod ng Naples nang isang oras. Ito ang unang lupaing Europeo na kanyang tinahak. Natuwa si Rizal sa lungsod ng Italya dahil sa masiglang kalakalan, buhay na buhay na mga tao, at kahanga-hangang tanawin. Labis siyang namangha sa Mount Vesuvius at sa Castle of St. Telmo.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: itlbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: itlmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: itlmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: itlstick1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: -350,
+                    offsetY: 350,
+                },
+                {
+                    src: itlstick2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
             ]
         },
 
@@ -225,7 +405,42 @@ const App = () => {
             title: "France - 1882: (Bapor Djemnah)",
             text: "Dumaong ang barko sa Marseilles, France, kung saan nanirahan si Rizal sa Noalles Hotel nang dalawang araw at kalahati. Sa kanyang pananatili, binisita niya ang tanyag na Chateau d’If. Pagkatapos ng kanyang paglagi sa Marseilles, sumakay siya ng tren patungong Barcelona, Espanya.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },
+        {
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
             ]
         },
     ];
