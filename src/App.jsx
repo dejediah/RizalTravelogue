@@ -136,8 +136,56 @@ const App = () => {
             title: "Paglalakbay at Pagkadestiyero  (1882-1896)",
             layers: [
                 { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+<<<<<<< HEAD
+=======
+                { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
+                { src: libertyPlaneMountain, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 10, size: '70% auto'},
+                { src: airshipBalloon, speed: -4.2, mouseSpeed: 0.05, objectFit: 'cover', position: 'center', z: 12, isBleeding: false, size: '100% auto'}
+
+
+
+>>>>>>> 5ee82f9a6b0a160783897af3ea2e84dfee6895dc
             ]
-        }
+        },
+        {
+            title: "Singapore (1882): Ang unang banyagang lupaing napuntahan ni Rizal (Bapor Salvador)",
+            text: "Sa paglalakbay, maingat na pinagmasdan ni Rizal ang labing-anim na pasahero ng bapor Salvadora, siya lamang ang Pilipino habang ang iba ay Kastila, Briton, at Itim na Indiyano. Nakipagkaibigan siya sa kapitan, Donato Lecha, at nilaro ang ahedres para maibsan ang pagkabagot, kung saan madalas niyang talunin ang iba. Noong Mayo 1882 ang naging unang tapak ni Jose Rizal sa dayuhang lupa. Dumaong ang bapor Savadora sa Singapore kung saan siya ay nagkaroon ng dalawang araw na panandaliang hintuan. Siya ay nanatili sa Hotel de la Paz at nilibot niya ang lugar sakay ng karwahe, binisita ang mga pook gaya ng isang paaralan, ang mga magagandang templo ng Buddhismo, ang sikat na Botanical Garden, mga mataong distrito ng pamilihan at ang  rebulto ni Sir Thomas Stamford Raffles na siyang tagapagtatag ng Singapore. Sa kanyang maikling pananatili, napagmasdan ni Rizal ang kaayusan, kalinisan, at episyenteng pamahalaan sa ilalim ng mga Briton. Bagama’t panandalian lamang ang pananatili, ito ang kanyang unang karanasan sa isang kolonyal na pamahalaang hindi Espanyol—na nagbigay sa kanya ng paghahambing sa katiwalian at kabulukan ng sistemang kolonyal sa Pilipinas.",
+            layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+            ]
+        },
+
+        {
+            title: "Sri Lanka (Ceylon) (1882): Pagdaan ni Rizal sa Timog Asya (Bapor Djemnah)",
+            text: "Lumipat sa isang mas malaki at mas malinis na barko, ang bapor Prances Djemnah, ang mga pasaherong pasasa-Europa. Habang sakay sa bapor Prances Djemnah ay nahasa niya ang kanyang kaalaman sa wikang Pranses dahil ang mga pasahero ay nagsasalita ng Pranses. Kung kaya’t araw-araw siyang nakipag-usap sa kanila gamit ang halo-halong Espanyol at Latin, pati na rin ng pagguhit sa papel upang magkaintindihan. Bilang bahagi ng rutang pandagat patungong Europa, dumaan si Rizal sa Ceylon (kasalukuyang Sri Lanka). Noong Mayo 17, dumating ang bapor Djemnah sa Point Galle, isang baybaying bayan sa timog ng Ceylon, ngunit hindi ito nagustuhan ni Rizal. Kinabukasan, ipinagpatuloy ang paglalakbay patungong Colombo, ang kabisera ng Ceylon. Pagkalipas ng ilang oras ng paglalayag, narating niya ang lungsod at namangha siya sa magagandang tanawin at magagarbong mga gusali nito. Nakita niya sa Ceylon ang mga kakaibang kalinangan at kultura ng mga tao na taga-roon na lubhang naiiba sa mga kolonyang Espanyol. Sa kanyang Travel Diary, inilalarawan ni Rizal ang init ng klima at ang tanawin ng mga estrukturang Asyano na may impluwensyang Hindu at Islamiko. Bagama’t hindi siya nanatili nang matagal sa Ceylon, ang kanyang obserbasyon sa kanilang pamumuhay ay nagbukas ng kanyang kaisipan sa posibilidad na maunlad at maayos ang pamumuhay ng mga Asyano sa labas ng kolonyal na pamahalaang Espanyol.",
+            layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+            ]
+        },
+
+        {
+            title: "Egypt - 1882: (Bapor Djemnah)",
+            text: "Mula sa Colombo, ipinagpatuloy ng bapor Djemnah ang paglalakbay patatawid sa Karagatang Indian hanggang sa baybayin ng Cape sa Africa. Unang nasilayan ni Rizal ang di-masukal na baybayin ng Africa, na tinawag niyang ‘isang di-kaaya-ayang lupain ngunit kilala.’ Sa lungsod ng Aden, napansin niyang mas mainit ang klima kaysa sa Maynila, at natuwa siyang makita ang mga kamelyo na unang pagkakataon din niyang nakita. Nagpatuloy ang barko patungo sa Lungsod ng Suez, ang Red Sea terminal ng Suez Canal. Pagdating doon, bumaba ng barko si Rizal upang mamasyal. Pinakanamangha siya sa kagandahan ng liwanag ng buwan, na nagpaalala sa kanya sa Calamba at sa kanyang  pamilya. Tumagal ng limang araw ang paglalakbay ng Djemnah sa Suez Canal, na isang bagong karanasan para sa kanya. Pagdating sa Port Said, bumaba siya upang mamasyal at humanga sa tanawin. Namangha rin si Rizal sa pagkakaroon ng mga taong mula sa iba't ibang lahi na nagsasalita ng iba't ibang mga wika. Ang mga karanasang ito ay nagbigay kay Rizal ng mas malawak na pag-unawa sa pagkakaiba-iba ng tao, kultura, at wika sa labas ng Pilipinas. Nakita niya na maraming paraan ng pamumuhay at pananaw sa mundo na naiiba sa karanasan niya sa ilalim ng kolonyalismong Espanyol.",
+            layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+            ]
+        },
+
+        {
+            title: "Italy - 1882: (Bapor Djemnah)",
+            text: "Noong Hunyo 11, 1882, bumaba si Rizal sa barko at, kasama ang isang gabay, naglibot sa Lungsod ng Naples nang isang oras. Ito ang unang lupaing Europeo na kanyang tinahak. Natuwa si Rizal sa lungsod ng Italya dahil sa masiglang kalakalan, buhay na buhay na mga tao, at kahanga-hangang tanawin. Labis siyang namangha sa Mount Vesuvius at sa Castle of St. Telmo.",
+            layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+            ]
+        },
+
+        {
+            title: "France - 1882: (Bapor Djemnah)",
+            text: "Dumaong ang barko sa Marseilles, France, kung saan nanirahan si Rizal sa Noalles Hotel nang dalawang araw at kalahati. Sa kanyang pananatili, binisita niya ang tanyag na Chateau d’If. Pagkatapos ng kanyang paglagi sa Marseilles, sumakay siya ng tren patungong Barcelona, Espanya.",
+            layers: [
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+            ]
+        },
     ];
 
     // Mouse movement listener
