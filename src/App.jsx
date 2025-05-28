@@ -17,10 +17,12 @@ import mgp3 from './assets/mgp3.png';
 import mg2p3 from './assets/mg2p3.png';
 import p3fg1 from './assets/p3fg1.png';
 import p3fg2 from './assets/p3fg2.png';
-
-import placeholderJpg from './assets/placeholder.jpg';
-import reactSvg from './assets/react.svg';
-import robloxPng from './assets/roblox.png';
+import ateneobg from './assets/ateneobg.png';
+import ateneomg1 from './assets/ateneomg1.png';
+import ateneomg2 from './assets/ateneomg2.png';
+import ateneomg3 from './assets/ateneomg3.png';
+import ateneosticky1 from './assets/ateneosticky1.png';
+import ateneosticky2 from './assets/ateneosticky2.png';
 
 const App = () => {
     const [activeSectionIndex, setActiveSectionIndex] = useState(0);
@@ -121,7 +123,47 @@ const App = () => {
           title: "Ateneo de Manila (1872-1877): Ang sekondaryang edukasyon ni Rizal.",
             text: "Matapos ang pagkamatay ni Gomburza noong 1872, ipinasok si Rizal sa Ateneo Municapal de Manila. Bagama’t noong una ay hindi siya tinanggap dahil sa kanyang pagiging “Indio”, natanggap siya dahil sa rekomendasyon ng isang pamilyar sa kanyang ina. Sa Ateneo, si Rizal ay naging “interno” at di-naglaon ay naging isa sa mga pinakamasigasig na mag-aaral. Natapos siya ng Batsilyer ng Sining at may pinakamataas na karangalan. Dito rin nahasa si Rizal sa larangan ng literatura, sining, agham, at relihiyon. Sumulat siya ng mga tula gaya ng “Sa Aking Mga Kabata” at iba pang akdang nagpapakita ng kanyang pambihirang pag-iisip sa murang edad. Kasabay nito, natutunan niya ang kahalagahan ng disiplina, pagiging makatao, at pagmamahal sa inang bayan.",
             layers: [
-                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: ateneobg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'top center', z: -5},
+                { src: ateneomg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: ateneomg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: -3, size: '100% auto' },
+                {
+                    src: ateneosticky1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetX: -100,
+                    offsetY: 150
+                },
+                {
+                    src: ateneosticky2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetX: 350,
+                    offsetY: 270
+                },
+                {
+                    src: ateneomg3,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'center',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetY: -100
+                }
 
             ]
         },
