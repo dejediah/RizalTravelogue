@@ -57,6 +57,26 @@ import frbg from './assets/frbg.png';
 import frmg from './assets/frmg.png';
 import frfg from './assets/frfg.png';
 import frstick from './assets/frstick.png';
+import barbg from './assets/barbg.png';
+import barmg1 from './assets/barmg1.png';
+import barmg2 from './assets/barmg2.png';
+import barfg from './assets/barfg.png';
+import barstick from './assets/barstick.png';
+import mdrbg from './assets/mdrbg.png';
+import mdrmg1 from './assets/mdrmg1.png';
+import mdrmg2 from './assets/mdrmg2.png';
+import mdrmg3 from './assets/mdrmg3.png';
+import mdrstick1 from './assets/mdrstick1.png';
+import mdrstick2 from './assets/mdrstick2.png';
+import parbg from './assets/parbg.png'; 
+import parmg1 from './assets/parmg1.png'; 
+import parmg2 from './assets/parmg2.png'; 
+import parmg3 from './assets/parmg3.png'; 
+import parmg4 from './assets/parmg4.png'; 
+import parfg1 from './assets/parfg1.png'; 
+import parstick1 from './assets/parstick1.png'; 
+import parstick2 from './assets/parstick2.png'; 
+
 
 
 const App = () => {
@@ -423,23 +443,97 @@ const App = () => {
                 }
             ]
         },
+        //barcelona
         {
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: barbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: barmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: barmg2, speed: -0.6, mouseSpeed: 0.01, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
+                { src: barfg, speed: -0.6, mouseSpeed: 0.03, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: barstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: -350,
+                    offsetY: 175,
+                }
+            ]
+        },
+        //madrid
+        {
+            layers: [
+                { src: mdrbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: mdrmg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: mdrmg2, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'bottom center', z: 1, size: '100% auto' },
+                { src: mdrmg3, speed: -0.6, mouseSpeed: 0.04, objectFit: 'cover', position: 'bottom center', z: 2, size: '100% auto' },
+                {
+                    src: mdrstick1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: -350,
+                    offsetY: 325,
+                },
+                {
+                    src: mdrstick2,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
                     position: 'right',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetX: 350,
+                    offsetY: 325,
+                }
+            ]
+        },
+        //paris
+        {
+            layers: [
+                { src: parbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: parmg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: parmg2, speed: -0.6, mouseSpeed: 0.05, objectFit: 'cover', position: 'bottom center', z: 1, size: '100% auto' },
+                { src: parmg3, speed: -0.6, mouseSpeed: -0.03, objectFit: 'cover', position: 'bottom center', z: 2, size: '100% auto' },
+                { src: parmg4, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 2, size: '100% auto' },
+                { src: parfg1, speed: -0.6, mouseSpeed: 0.03, objectFit: 'cover', position: 'bottom center', z: 2, size: '100% auto' },
+                {
+                    src: parstick1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: -325,
+                    offsetY: 315,
+                },
+                {
+                    src: parstick2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '100% auto',
+                    brightness: 1.0,
+                    offsetX: 350,
+                    offsetY: 225,
                 }
             ]
         },
