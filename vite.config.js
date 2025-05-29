@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import tailwindcss from '@tailwindcss/vite'   // ⟵ NEW
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc'; // Use swc plugin as per your devDependencies
 
 export default defineConfig({
-  plugins: [
-    tailwindcss(),   // ⟵ MUST be first so it can own the CSS pipeline
-    react()
-  ]
-})
+  plugins: [react()],
+  base: './', 
+  build: {
+    outDir: 'dist', 
+  },
+});
