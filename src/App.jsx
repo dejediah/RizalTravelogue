@@ -445,6 +445,9 @@ const App = () => {
         },
         //barcelona
         {
+            title: "Espanya o Spain: Karanasan at pamumuhay sa Barcelona at Madrid",
+            subtitle: "Barcelona",
+            text:"Sa paglalakbay sa tren, kanyang natawid ang mga bundok ng Pyrenees at siya tumigil ng isang araw sa hangganang bayan ng Portbou. Pagkatapos ng inspeksyon sa pasaporte sa Portbou ayy nakarating siya sa Barcelona. Isang salo-salong inihandog sa kanya ng mga Pilipino sa Barcelona sa Plaza de Cataluña, kung saan kabilang ang ilang naging kamag-aral niya sa Ateneo. Sa Barcelona niya isinulat ang kanyang unang sanaysay sa ibang bansa, ang El Amor Patria (Love of Country / Pag-ibig sa Tinubuang Lupa), na naglalaman ng malalim na pagmamahal sa Inang Bayan. Ang akdang ito, na ginamitan niya ng sagisag-panulat na Laong-laan, ay nagdulot ng malaking pansin mula sa mga Kastila at mga Pilipino. Nagdulot ito ng paghari ng galit sa panig, at ang mga Pilipino ay nagkaroon ng kaliwanagan sa isip at nagising ang kanilang damdaming makabayan. Habang nasa Barcelona ay pinaunlakan ni Rizal ang kahilingan ni Francisco Calvo na sumulat siyang muli. Ipinadala niya rito ang artikulong may pamagat na Los Viajes (Travels / Mga Paglalakbay) at Revista de Madrid (Review of Madrid / Pagbabalik Pananaw a Madrid) na sumasalamin sa kanyang mga karanasan sa paglalakbay at mas malawak na pananaw sa mundo. Sa kabuuan, ang kanyang mga karanasan sa Barcelona, mula sa pakikipag-ugnayan sa mga kapwa Pilipino hanggang sa paglalathala ng mga makabayang sulatin, ay nagpayaman sa kanyang pag-iisip at nagpatibay sa kanyang pagmamahal at dedikasyon sa Pilipinas.",
             layers: [
                 { src: barbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
                 { src: barmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
@@ -467,6 +470,9 @@ const App = () => {
         },
         //madrid
         {
+            title: "Espanya o Spain: Karanasan at pamumuhay sa Barcelona at Madrid",
+            subtitle: "Madrid",
+            text:"Nang magtatapos na ang taong 1882 ay nagtungo si Rizal sa Madrid upang doon ipagpatuloy ang pag-aaral. Panahon ng taglagas nang dumating siya sa Madrid.  Noong Nobyemre 3, 1882 ay napatala si Rizal sa Universidad Central de Madrid sa kursong Medisina at 'Filosofia y Letra' (Philosophy and Letters). Bukod dito, siya ay nag-aaral din ng pagpipinta at eskulptura sa Academia de San Fernando. Siya rin pumapasok pa sa ibang mga paaralan ng wika at kumukuha ng leksyon sa Pranses, Ingles, at Aleman sa Madrid Ateneo (Ateneo de Madrid). Nagsasanay rin siya ng arnis at pagdula sa Hall of Arms of Sanz y Carbonell. Malimit din dumalaw si Rizal sa tahanan ni Don Pablo Ortega y Rey, isang Kastilang liberal na naging gobernador-sibil noong panahon ni Gobernador Heneral Dela Torre. Dito ay lalong nahubog ang kanyang kaisipan ukol sa kalayaan, reporma, at makataong pamamahala. Isa rin sa naging libangan niya sa Madrid ay ang pagbabasa ng mga aklat tulad ng “The Wandering Jaw” at ang “Uncle Tom’s Cabin” ni Harriet Beecher Stowe na siyang gumising sa kanyang damdamin para sa mga naaapi. Ang temang ito ay kanyang dinala sa pagsusulat ng 'Noli Me Tangere,' isang nobelang sinumulan niyang isulat habang siya ay nag-aaral pa sa Madrid. Ang kanyang pagsali sa Masoneriya bilang si 'Dimasalang' ay bunga ng kanyang damdaming makabayan at pagkabigo sa sistemang panrelihiyon sa Pilipinas. Habang nasa Madrid ay nakatanggap si Rizal ng mga liham mula sa kanyang pamilya sa Calamba. Lubos ang pag-aalala ng kanyang ina, na nagkasakit dahil sa labis na pag-aalala sa panganib na kinakaharap ni Rizal sa kamay ng mga kaaway, pati na rin sa kadahilanang napapansin niya ang panlalamig ng anak sa kanilang relihiyon. Sa mga liham ni Rizal ay kanyang isinalarawan ni Rizal ang paghanga niya sa mga malayang kaisipan at repormang panlipunan ng mga Europeo, at ang paniniwalang hindi sa dahas kundi sa edukasyon at mapayapang reporma makakamit ang tunay na kalayaan. Noong Enero 2, 1884 ay muling nagtipon-tipon ang mga Pilipino sa bahay ni Pedro Paterno sa Madrid, at iminungkahi ni Rizal ang pagsulat ng isang nobela tungkol sa lipunang Pilipino. Ngunit sa kadahilanang ang ibig na sulatin ng kanyang mga kasamahan ay tungkol sa mga babae, sinarili na lamang ni Rizal ang pagsulat ng nobela tungkol sa Pilipinas. Noong Hunyo 21, 1884 ay natapos niya ang kursong Medisina at iginawad sa kanya ang titulong 'Licenciado en Medicina.' Ipinagpatuloy niya ang pag-aaral para maging ganap na Doktor ng Medisina, ngunit hindi niya natanggap ang diploma dahil sa kakulangan sa presentasyon ng tesis at bayad sa kinakailangang halaga. Sa kanyang kaarawan noong Hunyo 19, 1885, natamo niya ang titulong 'Licenciado en Filosofia y Letras' na may markang 'Sobresaliente.' Ang pananatili ni Rizal sa Madrid ay nagsilbing mahalagang yugto sa paghubog ng kanyang damdaming makabayan at intelektwal. Sa pamamagitan ng mga karanasang gaya ng pag-aaral, pagbabasa, pagsali sa mga samahan, at pakikisalamuha sa mga liberal na Europeo, nabuo ang pundasyon ng kanyang mga ideya ukol sa reporma, karapatang pantao, at pagkamakabayan ",
             layers: [
                 { src: mdrbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
                 { src: mdrmg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
@@ -502,6 +508,8 @@ const App = () => {
         },
         //paris
         {
+            title: "Paris, Pransiya o France (1885-1886): Nagpatuloy si Rizal sa kanyang pag-aaral at naging bahagi ng Kilusang Propaganda",
+            text:"Matapos ang kanyang pag-aaral sa Madrid noong 1885, nagtungo si Rizal sa Paris upang higit pang mapalawak at mapino ang kanyang kaalaman at kasanayan sa agham pangmedikal, lalo na sa optalmolohiya. Layunin niyang matutunan ito upang siya mismo ang makagamot at maka-opera sa mata ng kanyang ina. Sa pagtungo sa Paris ay dumaan siya sa Barcelona upang dalawin si Maximo Viola na isang kaibigan niyang estudyante ng Medisina. Namalagi siya roon ng isang lingo na kung saan ay nakilala at naging kaibigan niya ang patnugot at ang may-ari ng pahayagang 'La Publicidad.' Nanirahan si Rizal sa Paris humigit-kumulang sa apat na buwan. Sa panahong ito, naglingkod siya bilang katulong sa klinika ng bantog na optalmolohistang si Dr. Louis de Weckert, na tumulong sa pagpapahusay ng kanyang kasanayan. Madalas din siyang tumuloy sa tahanan ng mga Pardo de Tavera at sa studio ni Juan Luna, kung saan siya'y naging modelo ng ilang likhang-sining. Bukod sa pag-aaral habang nasa Paris, mas naging aktibo si Rizal sa Kilusang Propaganda na isang samahan ng mga ilustrado na naglalayong isulong ang mga reporma para sa Pilipinas. Sa piling ng mga edukado at progresibong Pilipino sa Europa, lalo pang tumibay ang kanyang paninindigang isulong ang karapatan ng mga kababayan.",
             layers: [
                 { src: parbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
                 { src: parmg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
@@ -534,6 +542,305 @@ const App = () => {
                     brightness: 1.0,
                     offsetX: 350,
                     offsetY: 225,
+                }
+            ]
+        },
+                {
+            title: "Alemanya o Germany (1886-1887): Nag-aral si Rizal ng ophthalmolohiya at sumulat ng nobelang 'Noli Me Tangere'",
+            text:"Noong sumunod na taon (1886), nagtungo naman si Rizal sa Heidelberg sa Alemanya. Dito ay tumulong din siya sa klinika ng tanyang na okulistang si Dr. Javier Galezowsky, at nag-aral sa ilalim ng pagtuturo ni Dr. Otto Becker. Sa isang lungsod sa Alemanya na tinatawag na Heidelberg, llabis naakit si Rizal sa magagandang tanawin sa kanyang pamamasyal, lalong-lalo na ng pamumukadkad ng mga bulaklak. Dahil sa halimuyak ng mga bulaklak ay nakapagpagunita kay Rizal ang kanyang bayan at nadama niya ang labis na pangungulila, kung kaya't isinulat niya ang isang tulang may pinamagatang 'A las Flores de Heidelberg' (To the Flowers of Heidelberg). Sa isang liham sa kanyang kapatid na si Trinidad, ipinahayag niya ang paghanga sa mga babaeng taga-Alemanya dahil sa kanilang pagiging tahimik, masisipag, at palakaibigan. Napansin din niya na hindi sila partikular sa magagarang damit o mamahaling alahas. Labis na ikinalungkot ni Rizal na higit na pinag-uukulan daw ng pansin ng mga babae sa Pilipinas ang kanilang pananamit kaysa karunungan. Gayunpaman ay pinuri niya ang kahinhinan, kagandahang-asal, katapatan at pagiging magalang ng mga Pilipina. Habang nasa Berlin naman, pinahusay niya ang kanyang kasanayan sa wikang Aleman, nagsulat ng papel na 'Tagalische Verkunst.'  Isinalin din niya sa Tagalog mula sa Aleman ang 'William Tell' ni Schiller upang maaaring malaman ng mga Pilipino ang storya ng pagkakuha ng kalayaan ng Switzerland. Bukod sa pag-aaral, napalawak din ni Rizal ang kanyang mga ugnayan sa mga siyentipiko at iskolar sa Alemanya. Napansin niya ang mga kaugalian ng mga taga-Alemanya, tulad ng kahalagahan ng pagpapakilala sa mga sosyal na pagtitipon at ang pagiging magalang. Naglibot din si Rizal sa mga makasaysayang lugar tulad ng Palacio Japonais sa Dresden, Alemanya, na nagdagdag ng lalim sa kanyang mga karanasan. Ang kanyang karanasan sa Alemanya, partikular ang pagdalo sa mga lektura at ang pakikipag-ugnayan sa mga doktor at manunulat, ay nagbigay-inspirasyon at nagpatibay sa kanyang layunin na gisingin ang kamalayan ng mga Pilipino laban sa pang-aapi. Sa pamamagitan ng pag-aaral at pagsulat, naipakita ni Rizal ang kanyang matinding pagmamahal sa bayan at hangarin para sa pagbabago. Ika-21 ng Marso 1887 sa Berlin, Germany, natapos at nailathala ni Rizal ang kanyang nobelang Noli Me Tangere sa tulong pinansyal ng kanyang kaibigang si Maximo Viola. Pagkatapos ng limang taon sa Europa, umuwi si Rizal sa Calamba noong Agosto 8, 1887.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },    
+
+                {
+            title: "Europe Tour (1887): Matapos ang pagpublika ng Noli Me Tangere, bumisita si Rizal sa iba't ibang importanteng lugar sa Europa",
+            text:"Matapos mailathala ang Noli Me Tangere, nagpasya si Dr. José Rizal na maglakbay sa iba’t ibang bahagi ng Europa upang palawakin ang kanyang kaalaman at karanasan. Kasama niya sa paglalakbay si Dr. Maximo Viola, na tumulong din sa pagpapalimbag ng kanyang nobela. Mula Berlin, unang tinungo nina Rizal at Viola ang Potsdam, isang lugar na kilala sa kasaysayan at kultura. Sumunod silang pumunta sa Dresden kung saan sila ay dumating kasabay ng isang eksposisyon ng mga bulaklak. Dito, binisita nila si Dr. Adolph B. Meyer at hinangaan ni Rizal ang obra maestrang Prometheus Bound sa museo ng sining. Noong Mayo 13, 1887, nagtungo sila sa Leitmeritz (Litomerice, Czech Republic) at doon unang nagkita sina Rizal at ang kanyang kaibigang si Propesor Ferdinand Blumentritt. Nanatili sila roon hanggang Mayo 16 at naranasan nila ang mainit na pagtanggap ng pamilya Blumentritt. Pagkatapos, binisita nila ang Prague at nakilala si Dr. Willkomm, isang propesor mula sa Unibersidad ng Prague. Sa Vienna, dumating sila noong Mayo 20, 1887, kung saan nakilala ni Rizal ang nobelistang si Norfenfals, at dito rin naibalik sa kanya ang nawawala niyang stickpin. Nagpatuloy ang kanilang paglalakbay sa pamamagitan ng Danubian voyage, na nagdala sa kanila sa Linz, Salzburg, Munich, at Nuremberg. Sa Munich, natikman nila ang sikat na beer ng lungsod. Pagsapit ng Hunyo 2, 1887, dumating sila sa Geneva, Switzerland, at nanatili roon ng 15 araw. Sa Hunyo 19, kaarawan ni Rizal, ginunita nila ito sa isang salu-salo. Noong Hunyo 23, naghiwalay ng landas sina Rizal at Viola, bumalik si Viola sa Barcelona samantalang nagpatuloy si Rizal sa Italy. Sa huli, nagtungo si Rizal sa Roma at bumisita sa Vatican, kung saan labis siyang namangha sa ganda ng tanawin at arkitektura. Sa kabuuan ng paglalakbay, hindi lamang niya nakita ang kagandahan ng Europa kundi lalo rin niyang napalalim ang kanyang kaalaman sa agham, sining, at kultura, mga karanasang nagpatibay sa kanyang paninindigan at lalong naghanda sa kanyang pagbabalik sa Pilipinas upang ipagpatuloy ang kanyang adhikain para sa bayan.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        }, 
+        
+        {
+            title: "Philippines (Agosto 1887)",
+            subtitle: "Manila",
+            text:"Insert later for",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },
+       
+        {
+            title: "Philippines (Agosto 1887)",
+            subtitle: "Calamba",
+            text:"Insert later for Calamba",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },         
+
+        {
+            title: "Hong Kong (1888): Bumisita si Rizal sa Hong Kong at nakipagkita sa mga Pilipinong ekspatriyado",
+            text:"Noong 1888, bumisita si Jose Rizal sa Hong Kong, kung saan nakipagkita siya sa mga Pilipinong ekspatriyado. Sa kanyang maikling pananatili, napalalim niya ang ugnayan sa kapwa makabayan at nagkaroon ng mas malawak na pag-unawa sa kalagayan ng mga Pilipino sa ibang bansa. Noong Pebrero 7, 1888, naglayag si José Rizal patungong Hong Kong sakay ng bapor na Zafiro, ngunit dahil sa hindi magandang pakiramdam at nakatagpo ng malakas na ulan, nagkaroon siya ng emergency stopover sa Amoy, Macau, kung saan napansin niyang marumi ang lungsod. Nang sumunod na araw, Pebrero 8, dumating siya sa mainland Hong Kong at nanatili sa Victoria Hotel, kung saan siya ay tinanggap ng mga kaibigang Pilipino. Noong Pebrero 18, bumisita si Rizal sa Macau kasama si Jose Ma. Basa sa pamamagitan ng ferry steamer na KiuKiang at nanatili sa bahay ni Don Juan Francisco Lecaros. Sa kanilang dalawang araw na pamamalagi, bumisita sila sa mga casino, simbahan, botanical garden, at nasaksihan ang isang Katolikong prusisyon bago bumalik sa Hong Kong noong Pebrero 20. Sa wakas, noong Pebrero 22, 1888, umalis si Rizal sa Hong Kong sakay ng American steamer na Oceanic, patungo sa Japan.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },   
+
+        {
+            title: "Hapon o Japan (1888): Bumisita si Rizal sa Hapon at nakipagkita sa mga opisyal ng Hapon",
+            text:"Dumating si Rizal sa Yokohama at pansamantalang nanirahan sa Grand Hotel bago nagtungo sa Tokyo, kung saan siya tumuloy sa Tokyo Hotel. Kalaunan ay tinanggap niya ang alok na libreng tirahan at pagkain sa Spanish Legation. Habang nasa Japan, masigasig niyang pinag-aralan ang kultura ng mga Hapon, kabilang ang kanilang mga kaugalian, wika, teatro, at kalakalan. Sumulat siya sa kanyang kaibigang si Ferdinand Blumentritt upang ipahayag ang kanyang paghanga sa katapatan, paggalang, kalinisan, at kasipagan ng mga Hapon, bagamat ipinahayag din niya ang pagkadismaya sa paggamit ng mandrawn jinrikisha. Habang naninirahan sa Spanish Legation, nakilala niya si O-Sei-san, isang Haponesa na tumatak sa kanyang alaala. Sumulat din siya sa kanyang pamilya at inilahad ang kanyang pangitain na balang araw ay magkakaroon ng mas malapit na ugnayan ang Pilipinas at Japan. Sa kanyang paglalakbay sa Japan, si Rizal ay humanga sa kaayusan, disiplina, at kagandahang-asal ng mga Hapones. Nakipagkita rin siya sa mga opisyal ng Hapon, na nagbukas ng kanyang pananaw sa isang maunlad at maayos na bansang Asyano.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        }, 
+
+        {
+            title: "Estados Unidos o United States (1888): Bumisita si Rizal sa Estados Unidos at napagmasdan ang lipunang Amerikano",
+            text:"Sa Estados Unidos, naranasan ni Rizal ang mabilis na pag-unlad ng lipunang Amerikano. Napagmasdan niya ang mga kabuhayan at industriya, ngunit napansin din niya ang hindi pagkakapantay-pantay, partikular sa diskriminasyon laban sa mga lahing may kulay.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        }, 
+
+        {
+            title: "Europa o Europe (1889-1891): Nagpatuloy si Rizal sa kanyang pagkakasangkot sa Kilusang Propaganda at sumulat ng mga artikulo at nobela",
+            text:"Nagpatuloy si Rizal sa kanyang pakikipag-ugnay sa Kilusang Propaganda habang nasa Europa. Dito, isinulat niya ang El Filibusterismo at iba pang mga artikulo para sa La Solidaridad, pinalalim ang kanyang paninindigan para sa reporma at kalayaan ng Pilipinas.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        }, 
+       
+        {
+            title: "Hong Kong (1891-1892): Nagtrabaho si Rizal bilang doktor at naging bahagi ng lokal na politika ng mga Pilipino",
+            text:"Bumalik si Rizal sa Hong Kong kung saan siya nagtrabaho bilang isang doktor. Naging aktibo siya sa lokal na pamayanan ng mga Pilipino, na tumutulong sa kanilang mga suliranin at nagbibigay ng payo, na nagpatibay sa kanyang pagkatao bilang isang lider at tagapayo.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },
+        
+        {
+            title: "Dapitan, Philippines (1892-1896): Si Rizal ay ipinatapon sa Dapitan ng mga awtoridad ng Espanya",
+            text:"Ipinatapon si Rizal sa Dapitan ng mga awtoridad ng Espanya, ngunit hindi ito naging hadlang upang magpatuloy siya sa pagtuturo, pagsusulat, at paglilingkod sa komunidad. Sa Dapitan, nagpatayo siya ng mga paaralan, ospital, at proyekto para sa kabutihan ng mga residente, patuloy na isinusulong ang kaalaman at kabutihan para sa kanyang mga kababayan.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },  
+        
+        {
+            title: "Pagbitay (1896)",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        },  
+        
+        {
+            title: "Manila (1896): Si Rizal ay naaresto, nilitis, at pinatay sa pamamagitan ng firing squad noong Disyembre 30, 1896",
+            text:"Insert Text Later for Final part",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
+                }
+            ]
+        }, 
+        
+        {
+            title: "Timeline or Map (Change Name)",
+            text:"Ang timeline na ito ay naglalarawan sa mga paglalakbay at karanasan ni Rizal na humubog sa kanyang buhay at mga isinulat.",
+            layers: [
+                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                {
+                    src: frstick,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: 250,
+                    offsetY: 285,
                 }
             ]
         },

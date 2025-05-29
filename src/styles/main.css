@@ -96,6 +96,13 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.section-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: medium;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 .section-text {
     font-size: 1.15rem;
     line-height: 1.6;
