@@ -1,7 +1,7 @@
 // --- src/components/section.jsx ---
 import React from 'react';
 
-const Section = ({ id, title, subtitle, text, layers }) => {
+const Section = ({ id, title, text, layers }) => {
     const bleedingLayers = layers.filter(layer => layer.isBleeding);
     const regularLayers = layers.filter(layer => !layer.isBleeding);
 
