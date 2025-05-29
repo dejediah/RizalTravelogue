@@ -76,6 +76,37 @@ import parmg4 from './assets/parmg4.png';
 import parfg1 from './assets/parfg1.png'; 
 import parstick1 from './assets/parstick1.png'; 
 import parstick2 from './assets/parstick2.png'; 
+import gerbg from './assets/gerbg.png';
+import germ1 from './assets/germ1.png';
+import germ2 from './assets/germ2.png';
+import gerf1 from './assets/gerf1.png';
+import gerf2 from './assets/gerf2.png';
+import eubg from './assets/eubg.png';
+import eumg1 from './assets/eumg1.png';
+import eumg2 from './assets/eumg2.png';
+import eumg3 from './assets/eumg3.png';
+import eumg4 from './assets/eumg4.png';
+import eusti1 from './assets/eusti1.png';
+import eusti2 from './assets/eusti2.png';
+import phbg from './assets/phbg.png';
+import phmg1 from './assets/phmg1.png';
+import phmg2 from './assets/phmg2.png';
+import phmg3 from './assets/phmg3.png';
+import phmg4 from './assets/phmg4.png';
+import phstick from './assets/phstick.png';
+import hkbg from './assets/hkbg.png';
+import hkmg1 from './assets/hkmg1.png';
+import hkmg2 from './assets/hkmg2.png';
+import hkstick from './assets/hkstick.png';
+import jpbg from './assets/jpbg.png';
+import jpmg1 from './assets/jpmg1.png';
+import jpmg2 from './assets/jpmg2.png';
+import jpstick from './assets/jpstick.png';
+import usbg from './assets/usbg.png';
+import usmg1 from './assets/usmg1.png';
+import usmg2 from './assets/usmg2.png';
+import usstick from './assets/usstick.png';
+
 
 
 
@@ -557,11 +588,24 @@ const App = () => {
             title: "Alemanya o Germany (1886-1887): Nag-aral si Rizal ng ophthalmolohiya at sumulat ng nobelang 'Noli Me Tangere'",
             text:"Noong sumunod na taon (1886), nagtungo naman si Rizal sa Heidelberg sa Alemanya. Dito ay tumulong din siya sa klinika ng tanyang na okulistang si Dr. Javier Galezowsky, at nag-aral sa ilalim ng pagtuturo ni Dr. Otto Becker. Sa isang lungsod sa Alemanya na tinatawag na Heidelberg, llabis naakit si Rizal sa magagandang tanawin sa kanyang pamamasyal, lalong-lalo na ng pamumukadkad ng mga bulaklak. Dahil sa halimuyak ng mga bulaklak ay nakapagpagunita kay Rizal ang kanyang bayan at nadama niya ang labis na pangungulila, kung kaya't isinulat niya ang isang tulang may pinamagatang 'A las Flores de Heidelberg' (To the Flowers of Heidelberg). Sa isang liham sa kanyang kapatid na si Trinidad, ipinahayag niya ang paghanga sa mga babaeng taga-Alemanya dahil sa kanilang pagiging tahimik, masisipag, at palakaibigan.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: gerbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: germ1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: germ2, speed: -0.6, mouseSpeed: 0.04, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: gerf1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: -250,
+                    offsetY: 285,
+                },
+                {
+                    src: gerf2,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
@@ -579,22 +623,9 @@ const App = () => {
             title: "Alemanya o Germany (1886-1887): Nag-aral si Rizal ng ophthalmolohiya at sumulat ng nobelang 'Noli Me Tangere'",
             text:"Napansin din niya na hindi sila partikular sa magagarang damit o mamahaling alahas. Labis na ikinalungkot ni Rizal na higit na pinag-uukulan daw ng pansin ng mga babae sa Pilipinas ang kanilang pananamit kaysa karunungan. Gayunpaman ay pinuri niya ang kahinhinan, kagandahang-asal, katapatan at pagiging magalang ng mga Pilipina. Habang nasa Berlin naman, pinahusay niya ang kanyang kasanayan sa wikang Aleman, nagsulat ng papel na 'Tagalische Verkunst.'  Isinalin din niya sa Tagalog mula sa Aleman ang 'William Tell' ni Schiller upang maaaring malaman ng mga Pilipino ang storya ng pagkakuha ng kalayaan ng Switzerland. Bukod sa pag-aaral, napalawak din ni Rizal ang kanyang mga ugnayan sa mga siyentipiko at iskolar sa Alemanya. Napansin niya ang mga kaugalian ng mga taga-Alemanya, tulad ng kahalagahan ng pagpapakilala sa mga sosyal na pagtitipon at ang pagiging magalang. Naglibot din si Rizal sa mga makasaysayang lugar tulad ng Palacio Japonais sa Dresden, Alemanya, na nagdagdag ng lalim sa kanyang mga karanasan. Ang kanyang karanasan sa Alemanya, partikular ang pagdalo sa mga lektura at ang pakikipag-ugnayan sa mga doktor at manunulat, ay nagbigay-inspirasyon at nagpatibay sa kanyang layunin na gisingin ang kamalayan ng mga Pilipino laban sa pang-aapi. Sa pamamagitan ng pag-aaral at pagsulat, naipakita ni Rizal ang kanyang matinding pagmamahal sa bayan at hangarin para sa pagbabago. Ika-21 ng Marso 1887 sa Berlin, Germany, natapos at nailathala ni Rizal ang kanyang nobelang Noli Me Tangere sa tulong pinansyal ng kanyang kaibigang si Maximo Viola. Pagkatapos ng limang taon sa Europa, umuwi si Rizal sa Calamba noong Agosto 8, 1887.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
-                {
-                    src: frstick,
-                    speed: 0,
-                    mouseSpeed: 0.05,
-                    objectFit: 'contain',
-                    position: 'right',
-                    z: 91,
-                    isBleeding: true,
-                    size: '85% auto',
-                    brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
-                }
+                { src: gerbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: germ1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: germ2, speed: -0.6, mouseSpeed: 0.04, objectFit: 'cover', position: 'bottom center', z: 10, size: '100% auto' },
             ]
         },    
 
@@ -602,11 +633,26 @@ const App = () => {
             title: "Europe Tour (1887): Matapos ang pagpublika ng Noli Me Tangere, bumisita si Rizal sa iba't ibang importanteng lugar sa Europa",
             text:"Matapos mailathala ang Noli Me Tangere, nagpasya si Dr. José Rizal na maglakbay sa iba’t ibang bahagi ng Europa upang palawakin ang kanyang kaalaman at karanasan. Kasama niya sa paglalakbay si Dr. Maximo Viola, na tumulong din sa pagpapalimbag ng kanyang nobela. Mula Berlin, unang tinungo nina Rizal at Viola ang Potsdam, isang lugar na kilala sa kasaysayan at kultura. Sumunod silang pumunta sa Dresden kung saan sila ay dumating kasabay ng isang eksposisyon ng mga bulaklak. Dito, binisita nila si Dr. Adolph B. Meyer at hinangaan ni Rizal ang obra maestrang Prometheus Bound sa museo ng sining. Noong Mayo 13, 1887, nagtungo sila sa Leitmeritz (Litomerice, Czech Republic) at doon unang nagkita sina Rizal at ang kanyang kaibigang si Propesor Ferdinand Blumentritt. Nanatili sila roon hanggang Mayo 16 at naranasan nila ang mainit na pagtanggap ng pamilya Blumentritt.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: eubg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: eumg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg2, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg4, speed: -0.6, mouseSpeed: 0.03, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: eusti1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: -159,
+                    offsetY: 285,
+                },
+                                {
+                    src: eusti2,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
@@ -624,22 +670,11 @@ const App = () => {
             title: "Europe Tour (1887): Matapos ang pagpublika ng Noli Me Tangere, bumisita si Rizal sa iba't ibang importanteng lugar sa Europa",
             text:"Pagkatapos, binisita nila ang Prague at nakilala si Dr. Willkomm, isang propesor mula sa Unibersidad ng Prague. Sa Vienna, dumating sila noong Mayo 20, 1887, kung saan nakilala ni Rizal ang nobelistang si Norfenfals, at dito rin naibalik sa kanya ang nawawala niyang stickpin. Nagpatuloy ang kanilang paglalakbay sa pamamagitan ng Danubian voyage, na nagdala sa kanila sa Linz, Salzburg, Munich, at Nuremberg. Sa Munich, natikman nila ang sikat na beer ng lungsod. Pagsapit ng Hunyo 2, 1887, dumating sila sa Geneva, Switzerland, at nanatili roon ng 15 araw. Sa Hunyo 19, kaarawan ni Rizal, ginunita nila ito sa isang salu-salo. Noong Hunyo 23, naghiwalay ng landas sina Rizal at Viola, bumalik si Viola sa Barcelona samantalang nagpatuloy si Rizal sa Italy. Sa huli, nagtungo si Rizal sa Roma at bumisita sa Vatican, kung saan labis siyang namangha sa ganda ng tanawin at arkitektura. Sa kabuuan ng paglalakbay, hindi lamang niya nakita ang kagandahan ng Europa kundi lalo rin niyang napalalim ang kanyang kaalaman sa agham, sining, at kultura, mga karanasang nagpatibay sa kanyang paninindigan at lalong naghanda sa kanyang pagbabalik sa Pilipinas upang ipagpatuloy ang kanyang adhikain para sa bayan.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
-                {
-                    src: frstick,
-                    speed: 0,
-                    mouseSpeed: 0.05,
-                    objectFit: 'contain',
-                    position: 'right',
-                    z: 91,
-                    isBleeding: true,
-                    size: '85% auto',
-                    brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
-                }
+                { src: eubg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: eumg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg2, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg4, speed: -0.6, mouseSpeed: 0.03, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
             ]
         }, 
         
@@ -648,21 +683,22 @@ const App = () => {
             subtitle: "Manila",
             text:"Insert later for",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: phbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: phmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: phmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
+                { src: phmg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -2, size: '100% auto' },
+                { src: phmg4, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: phstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'center',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetY: 85,
                 }
             ]
         },
@@ -672,21 +708,34 @@ const App = () => {
             subtitle: "Calamba",
             text:"Insert later for Calamba",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: bgp3, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'top center', z: -2},
+                { src: mg2p3, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -1, size: '100% auto' },
+                { src: mgp3, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'center', z: 10, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: p3fg1,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'bottom left',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '70% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetX: -70,
+                    offsetY: 150
+                },
+                {
+                    src: p3fg2,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'bottom right',
+                    z: 91,
+                    isBleeding: true,
+                    size: '75% auto',
+                    brightness: 1.0,
+                    offsetX: 275,
+                    offsetY: 225
                 }
             ]
         },         
@@ -695,21 +744,20 @@ const App = () => {
             title: "Hong Kong (1888): Bumisita si Rizal sa Hong Kong at nakipagkita sa mga Pilipinong ekspatriyado",
             text:"Noong 1888, bumisita si Jose Rizal sa Hong Kong, kung saan nakipagkita siya sa mga Pilipinong ekspatriyado. Sa kanyang maikling pananatili, napalalim niya ang ugnayan sa kapwa makabayan at nagkaroon ng mas malawak na pag-unawa sa kalagayan ng mga Pilipino sa ibang bansa. Noong Pebrero 7, 1888, naglayag si José Rizal patungong Hong Kong sakay ng bapor na Zafiro, ngunit dahil sa hindi magandang pakiramdam at nakatagpo ng malakas na ulan, nagkaroon siya ng emergency stopover sa Amoy, Macau, kung saan napansin niyang marumi ang lungsod. Nang sumunod na araw, Pebrero 8, dumating siya sa mainland Hong Kong at nanatili sa Victoria Hotel, kung saan siya ay tinanggap ng mga kaibigang Pilipino. Noong Pebrero 18, bumisita si Rizal sa Macau kasama si Jose Ma. Basa sa pamamagitan ng ferry steamer na KiuKiang at nanatili sa bahay ni Don Juan Francisco Lecaros. Sa kanilang dalawang araw na pamamalagi, bumisita sila sa mga casino, simbahan, botanical garden, at nasaksihan ang isang Katolikong prusisyon bago bumalik sa Hong Kong noong Pebrero 20. Sa wakas, noong Pebrero 22, 1888, umalis si Rizal sa Hong Kong sakay ng American steamer na Oceanic, patungo sa Japan.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: hkbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: hkmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: hkmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: hkstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
-                    z: 91,
-                    isBleeding: true,
-                    size: '85% auto',
+                    position: 'center',
+                    z: 10,
+                    isBleeding: false,
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetY: 85,
                 }
             ]
         },   
@@ -718,21 +766,20 @@ const App = () => {
             title: "Hapon o Japan (1888): Bumisita si Rizal sa Hapon at nakipagkita sa mga opisyal ng Hapon",
             text:"Dumating si Rizal sa Yokohama at pansamantalang nanirahan sa Grand Hotel bago nagtungo sa Tokyo, kung saan siya tumuloy sa Tokyo Hotel. Kalaunan ay tinanggap niya ang alok na libreng tirahan at pagkain sa Spanish Legation. Habang nasa Japan, masigasig niyang pinag-aralan ang kultura ng mga Hapon, kabilang ang kanilang mga kaugalian, wika, teatro, at kalakalan. Sumulat siya sa kanyang kaibigang si Ferdinand Blumentritt upang ipahayag ang kanyang paghanga sa katapatan, paggalang, kalinisan, at kasipagan ng mga Hapon, bagamat ipinahayag din niya ang pagkadismaya sa paggamit ng mandrawn jinrikisha. Habang naninirahan sa Spanish Legation, nakilala niya si O-Sei-san, isang Haponesa na tumatak sa kanyang alaala. Sumulat din siya sa kanyang pamilya at inilahad ang kanyang pangitain na balang araw ay magkakaroon ng mas malapit na ugnayan ang Pilipinas at Japan. Sa kanyang paglalakbay sa Japan, si Rizal ay humanga sa kaayusan, disiplina, at kagandahang-asal ng mga Hapones. Nakipagkita rin siya sa mga opisyal ng Hapon, na nagbukas ng kanyang pananaw sa isang maunlad at maayos na bansang Asyano.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: jpbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: jpmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: jpmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: jpstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'center',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetY: 175,
                 }
             ]
         }, 
@@ -741,21 +788,21 @@ const App = () => {
             title: "Estados Unidos o United States (1888): Bumisita si Rizal sa Estados Unidos at napagmasdan ang lipunang Amerikano",
             text:"Sa Estados Unidos, naranasan ni Rizal ang mabilis na pag-unlad ng lipunang Amerikano. Napagmasdan niya ang mga kabuhayan at industriya, ngunit napansin din niya ang hindi pagkakapantay-pantay, partikular sa diskriminasyon laban sa mga lahing may kulay.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: usbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: usmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: usmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: usstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'center',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetX: 165,
+                    offsetY: 127,
                 }
             ]
         }, 
@@ -764,11 +811,26 @@ const App = () => {
             title: "Europa o Europe (1889-1891): Nagpatuloy si Rizal sa kanyang pagkakasangkot sa Kilusang Propaganda at sumulat ng mga artikulo at nobela",
             text:"Nagpatuloy si Rizal sa kanyang pakikipag-ugnay sa Kilusang Propaganda habang nasa Europa. Dito, isinulat niya ang El Filibusterismo at iba pang mga artikulo para sa La Solidaridad, pinalalim ang kanyang paninindigan para sa reporma at kalayaan ng Pilipinas.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: eubg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: eumg1, speed: -0.6, mouseSpeed: -0.06, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg2, speed: -0.6, mouseSpeed: -0.04, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: eumg4, speed: -0.6, mouseSpeed: 0.03, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: eusti1,
+                    speed: 0,
+                    mouseSpeed: 0.05,
+                    objectFit: 'contain',
+                    position: 'left',
+                    z: 91,
+                    isBleeding: true,
+                    size: '85% auto',
+                    brightness: 1.0,
+                    offsetX: -159,
+                    offsetY: 285,
+                },
+                                {
+                    src: eusti2,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
@@ -787,21 +849,20 @@ const App = () => {
             title: "Hong Kong (1891-1892): Nagtrabaho si Rizal bilang doktor at naging bahagi ng lokal na politika ng mga Pilipino",
             text:"Bumalik si Rizal sa Hong Kong kung saan siya nagtrabaho bilang isang doktor. Naging aktibo siya sa lokal na pamayanan ng mga Pilipino, na tumutulong sa kanilang mga suliranin at nagbibigay ng payo, na nagpatibay sa kanyang pagkatao bilang isang lider at tagapayo.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: hkbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: hkmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: hkmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: hkstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
-                    z: 91,
-                    isBleeding: true,
-                    size: '85% auto',
+                    position: 'center',
+                    z: 10,
+                    isBleeding: false,
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetY: 85,
                 }
             ]
         },
@@ -810,21 +871,22 @@ const App = () => {
             title: "Dapitan, Philippines (1892-1896): Si Rizal ay ipinatapon sa Dapitan ng mga awtoridad ng Espanya",
             text:"Ipinatapon si Rizal sa Dapitan ng mga awtoridad ng Espanya, ngunit hindi ito naging hadlang upang magpatuloy siya sa pagtuturo, pagsusulat, at paglilingkod sa komunidad. Sa Dapitan, nagpatayo siya ng mga paaralan, ospital, at proyekto para sa kabutihan ng mga residente, patuloy na isinusulong ang kaalaman at kabutihan para sa kanyang mga kababayan.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: phbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: phmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: phmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
+                { src: phmg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -2, size: '100% auto' },
+                { src: phmg4, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: phstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'center',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetY: 85,
                 }
             ]
         },  
@@ -832,21 +894,19 @@ const App = () => {
         {
             title: "Pagbitay (1896)",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: mapBackground, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'center', z: -3},
+                { src: stBasilPisa, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -2, size: '200% auto' },
+                { src: libertyPlaneMountain, speed: -1.8, mouseSpeed: 0.02, objectFit: 'cover', position: 'center', z: 10, size: '70% auto'},
                 {
-                    src: frstick,
-                    speed: 0,
+                    src: airshipBalloon,
+                    speed: -0.2,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'center',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
-                    brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    size: '100% auto',
+                    brightness: 1.0
                 }
             ]
         },  
@@ -855,21 +915,22 @@ const App = () => {
             title: "Manila (1896): Si Rizal ay naaresto, nilitis, at pinatay sa pamamagitan ng firing squad noong Disyembre 30, 1896",
             text:"Insert Text Later for Final part",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
+                { src: phbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: phmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: phmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
+                { src: phmg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -2, size: '100% auto' },
+                { src: phmg4, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
                 {
-                    src: frstick,
+                    src: phstick,
                     speed: 0,
                     mouseSpeed: 0.05,
                     objectFit: 'contain',
-                    position: 'right',
+                    position: 'center',
                     z: 91,
                     isBleeding: true,
-                    size: '85% auto',
+                    size: '100% auto',
                     brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
+                    offsetY: 85,
                 }
             ]
         }, 
@@ -878,22 +939,11 @@ const App = () => {
             title: "Timeline or Map (Change Name)",
             text:"Ang timeline na ito ay naglalarawan sa mga paglalakbay at karanasan ni Rizal na humubog sa kanyang buhay at mga isinulat.",
             layers: [
-                { src: frbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
-                { src: frmg, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
-                { src: frfg, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
-                {
-                    src: frstick,
-                    speed: 0,
-                    mouseSpeed: 0.05,
-                    objectFit: 'contain',
-                    position: 'right',
-                    z: 91,
-                    isBleeding: true,
-                    size: '85% auto',
-                    brightness: 1.0,
-                    offsetX: 250,
-                    offsetY: 285,
-                }
+                { src: phbg, speed: -0.2, mouseSpeed: -0.01, objectFit: 'cover', position: 'bottom center', z: -5, size: '200% auto'},
+                { src: phmg1, speed: -0.6, mouseSpeed: -0.02, objectFit: 'cover', position: 'center', z: -4, size: '100% auto' },
+                { src: phmg2, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -3, size: '100% auto' },
+                { src: phmg3, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: -2, size: '100% auto' },
+                { src: phmg4, speed: -0.6, mouseSpeed: 0.02, objectFit: 'cover', position: 'bottom center', z: 11, size: '100% auto' },
             ]
         },
     ];
